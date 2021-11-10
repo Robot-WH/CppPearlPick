@@ -52,7 +52,7 @@ namespace my {
 
         private:
             _T *p_;
-    };
+    }; // class  scoped_ptr
 };  
 
 int main()

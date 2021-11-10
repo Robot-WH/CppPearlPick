@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/scoped_array.dir/scoped_array.cpp.o  -o ../../bin/scoped_array 

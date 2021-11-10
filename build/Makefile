@@ -123,6 +123,19 @@ scoped_ptr/fast:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
 .PHONY : scoped_ptr/fast
 
+#=============================================================================
+# Target rules for targets named scoped_array
+
+# Build rule for target.
+scoped_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 scoped_array
+.PHONY : scoped_array
+
+# fast build rule for target.
+scoped_array/fast:
+	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
+.PHONY : scoped_array/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +145,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... scoped_ptr"
+	@echo "... scoped_array"
 .PHONY : help
 
 

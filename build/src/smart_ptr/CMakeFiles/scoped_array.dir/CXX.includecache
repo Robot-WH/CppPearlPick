@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lwh/code/CppPearlPick/src/smart_ptr/scoped_array.cpp
+iostream
+-
+memory
+-
+boost/smart_ptr.hpp
+-
+

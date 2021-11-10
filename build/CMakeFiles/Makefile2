@@ -103,11 +103,13 @@ src/mySTL/preinstall:
 
 # Convenience name for "all" pass in the directory.
 src/smart_ptr/all: src/smart_ptr/CMakeFiles/scoped_ptr.dir/all
+src/smart_ptr/all: src/smart_ptr/CMakeFiles/scoped_array.dir/all
 
 .PHONY : src/smart_ptr/all
 
 # Convenience name for "clean" pass in the directory.
 src/smart_ptr/clean: src/smart_ptr/CMakeFiles/scoped_ptr.dir/clean
+src/smart_ptr/clean: src/smart_ptr/CMakeFiles/scoped_array.dir/clean
 
 .PHONY : src/smart_ptr/clean
 
@@ -123,7 +125,7 @@ src/smart_ptr/preinstall:
 src/smart_ptr/CMakeFiles/scoped_ptr.dir/all:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/depend
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=1,2 "Built target scoped_ptr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=3,4 "Built target scoped_ptr"
 .PHONY : src/smart_ptr/CMakeFiles/scoped_ptr.dir/all
 
 # Include target in all.
@@ -150,6 +152,43 @@ src/smart_ptr/CMakeFiles/scoped_ptr.dir/clean:
 
 # clean rule for target.
 clean: src/smart_ptr/CMakeFiles/scoped_ptr.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/smart_ptr/CMakeFiles/scoped_array.dir
+
+# All Build rule for target.
+src/smart_ptr/CMakeFiles/scoped_array.dir/all:
+	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/depend
+	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=1,2 "Built target scoped_array"
+.PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/all
+
+# Include target in all.
+all: src/smart_ptr/CMakeFiles/scoped_array.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/smart_ptr/CMakeFiles/scoped_array.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_array.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+.PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/rule
+
+# Convenience name for target.
+scoped_array: src/smart_ptr/CMakeFiles/scoped_array.dir/rule
+
+.PHONY : scoped_array
+
+# clean rule for target.
+src/smart_ptr/CMakeFiles/scoped_array.dir/clean:
+	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/clean
+.PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/clean
+
+# clean rule for target.
+clean: src/smart_ptr/CMakeFiles/scoped_array.dir/clean
 
 .PHONY : clean
 

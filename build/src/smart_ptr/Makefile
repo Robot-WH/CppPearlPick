@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/lwh/code/CppPearlPick/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -125,6 +125,48 @@ scoped_ptr/fast:
 	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
 .PHONY : scoped_ptr/fast
 
+# Convenience name for target.
+src/smart_ptr/CMakeFiles/scoped_array.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_array.dir/rule
+.PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/rule
+
+# Convenience name for target.
+scoped_array: src/smart_ptr/CMakeFiles/scoped_array.dir/rule
+
+.PHONY : scoped_array
+
+# fast build rule for target.
+scoped_array/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
+.PHONY : scoped_array/fast
+
+scoped_array.o: scoped_array.cpp.o
+
+.PHONY : scoped_array.o
+
+# target to build an object file
+scoped_array.cpp.o:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.o
+.PHONY : scoped_array.cpp.o
+
+scoped_array.i: scoped_array.cpp.i
+
+.PHONY : scoped_array.i
+
+# target to preprocess a source file
+scoped_array.cpp.i:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.i
+.PHONY : scoped_array.cpp.i
+
+scoped_array.s: scoped_array.cpp.s
+
+.PHONY : scoped_array.s
+
+# target to generate assembly for a file
+scoped_array.cpp.s:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.s
+.PHONY : scoped_array.cpp.s
+
 scoped_ptr.o: scoped_ptr.cpp.o
 
 .PHONY : scoped_ptr.o
@@ -158,9 +200,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... scoped_ptr"
 	@echo "... edit_cache"
+	@echo "... scoped_ptr"
+	@echo "... rebuild_cache"
+	@echo "... scoped_array"
+	@echo "... scoped_array.o"
+	@echo "... scoped_array.i"
+	@echo "... scoped_array.s"
 	@echo "... scoped_ptr.o"
 	@echo "... scoped_ptr.i"
 	@echo "... scoped_ptr.s"
