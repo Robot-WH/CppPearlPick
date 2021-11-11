@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/smart_ptr/CMakeFiles/shared_ptr.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
+.PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
+
+# Convenience name for target.
+shared_ptr: src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
+
+.PHONY : shared_ptr
+
+# fast build rule for target.
+shared_ptr/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/build
+.PHONY : shared_ptr/fast
+
+# Convenience name for target.
 src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule:
 	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule
 .PHONY : src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule
@@ -194,6 +209,33 @@ scoped_ptr.cpp.s:
 	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.s
 .PHONY : scoped_ptr.cpp.s
 
+shared_ptr.o: shared_ptr.cpp.o
+
+.PHONY : shared_ptr.o
+
+# target to build an object file
+shared_ptr.cpp.o:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.o
+.PHONY : shared_ptr.cpp.o
+
+shared_ptr.i: shared_ptr.cpp.i
+
+.PHONY : shared_ptr.i
+
+# target to preprocess a source file
+shared_ptr.cpp.i:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.i
+.PHONY : shared_ptr.cpp.i
+
+shared_ptr.s: shared_ptr.cpp.s
+
+.PHONY : shared_ptr.s
+
+# target to generate assembly for a file
+shared_ptr.cpp.s:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.s
+.PHONY : shared_ptr.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -201,6 +243,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... shared_ptr"
 	@echo "... scoped_ptr"
 	@echo "... rebuild_cache"
 	@echo "... scoped_array"
@@ -210,6 +253,9 @@ help:
 	@echo "... scoped_ptr.o"
 	@echo "... scoped_ptr.i"
 	@echo "... scoped_ptr.s"
+	@echo "... shared_ptr.o"
+	@echo "... shared_ptr.i"
+	@echo "... shared_ptr.s"
 .PHONY : help
 
 

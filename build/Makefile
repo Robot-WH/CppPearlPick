@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named shared_ptr
+
+# Build rule for target.
+shared_ptr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shared_ptr
+.PHONY : shared_ptr
+
+# fast build rule for target.
+shared_ptr/fast:
+	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/build
+.PHONY : shared_ptr/fast
+
+#=============================================================================
 # Target rules for targets named scoped_ptr
 
 # Build rule for target.
@@ -144,6 +157,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... shared_ptr"
 	@echo "... scoped_ptr"
 	@echo "... scoped_array"
 .PHONY : help

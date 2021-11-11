@@ -55,6 +55,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/smart_ptr/CMakeFiles/shared_ptr.dir/DependInfo.cmake"
   "src/smart_ptr/CMakeFiles/scoped_ptr.dir/DependInfo.cmake"
   "src/smart_ptr/CMakeFiles/scoped_array.dir/DependInfo.cmake"
   )

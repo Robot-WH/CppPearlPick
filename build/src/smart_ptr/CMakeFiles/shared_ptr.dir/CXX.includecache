@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-../src/smart_ptr/include/scoped_array.hpp
+../src/smart_ptr/include/shared_ptr.hpp
 iostream
 -
 memory
 -
 
-/home/lwh/code/CppPearlPick/src/smart_ptr/scoped_array.cpp
+/home/lwh/code/CppPearlPick/src/smart_ptr/shared_ptr.cpp
 iostream
 -
 memory
 -
 boost/smart_ptr.hpp
 -
-scoped_array.hpp
-/home/lwh/code/CppPearlPick/src/smart_ptr/scoped_array.hpp
+shared_ptr.hpp
+/home/lwh/code/CppPearlPick/src/smart_ptr/shared_ptr.hpp
 

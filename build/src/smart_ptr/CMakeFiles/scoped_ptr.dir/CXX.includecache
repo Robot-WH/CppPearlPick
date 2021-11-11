@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../src/smart_ptr/include/scoped_ptr.hpp
+iostream
+-
+memory
+-
+
 /home/lwh/code/CppPearlPick/src/smart_ptr/scoped_ptr.cpp
 iostream
 -
@@ -13,4 +19,6 @@ memory
 -
 boost/smart_ptr.hpp
 -
+scoped_ptr.hpp
+/home/lwh/code/CppPearlPick/src/smart_ptr/scoped_ptr.hpp
 

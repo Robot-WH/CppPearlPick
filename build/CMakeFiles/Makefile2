@@ -102,12 +102,14 @@ src/mySTL/preinstall:
 # Directory level rules for directory src/smart_ptr
 
 # Convenience name for "all" pass in the directory.
+src/smart_ptr/all: src/smart_ptr/CMakeFiles/shared_ptr.dir/all
 src/smart_ptr/all: src/smart_ptr/CMakeFiles/scoped_ptr.dir/all
 src/smart_ptr/all: src/smart_ptr/CMakeFiles/scoped_array.dir/all
 
 .PHONY : src/smart_ptr/all
 
 # Convenience name for "clean" pass in the directory.
+src/smart_ptr/clean: src/smart_ptr/CMakeFiles/shared_ptr.dir/clean
 src/smart_ptr/clean: src/smart_ptr/CMakeFiles/scoped_ptr.dir/clean
 src/smart_ptr/clean: src/smart_ptr/CMakeFiles/scoped_array.dir/clean
 
@@ -117,6 +119,43 @@ src/smart_ptr/clean: src/smart_ptr/CMakeFiles/scoped_array.dir/clean
 src/smart_ptr/preinstall:
 
 .PHONY : src/smart_ptr/preinstall
+
+#=============================================================================
+# Target rules for target src/smart_ptr/CMakeFiles/shared_ptr.dir
+
+# All Build rule for target.
+src/smart_ptr/CMakeFiles/shared_ptr.dir/all:
+	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/depend
+	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=5,6 "Built target shared_ptr"
+.PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/all
+
+# Include target in all.
+all: src/smart_ptr/CMakeFiles/shared_ptr.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/smart_ptr/CMakeFiles/shared_ptr.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/shared_ptr.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+.PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
+
+# Convenience name for target.
+shared_ptr: src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
+
+.PHONY : shared_ptr
+
+# clean rule for target.
+src/smart_ptr/CMakeFiles/shared_ptr.dir/clean:
+	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/clean
+.PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/clean
+
+# clean rule for target.
+clean: src/smart_ptr/CMakeFiles/shared_ptr.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target src/smart_ptr/CMakeFiles/scoped_ptr.dir
