@@ -12,7 +12,7 @@ iostream
 memory
 -
 
-/home/lwh/code/CppPearlPick/src/smart_ptr/shared_ptr.cpp
+/home/lwh/学习/CppPearlPick/src/smart_ptr/shared_ptr.cpp
 iostream
 -
 memory
@@ -20,5 +20,5 @@ memory
 boost/smart_ptr.hpp
 -
 shared_ptr.hpp
-/home/lwh/code/CppPearlPick/src/smart_ptr/shared_ptr.hpp
+/home/lwh/学习/CppPearlPick/src/smart_ptr/shared_ptr.hpp
 

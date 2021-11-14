@@ -12,7 +12,7 @@ iostream
 memory
 -
 
-/home/lwh/code/CppPearlPick/src/smart_ptr/scoped_array.cpp
+/home/lwh/学习/CppPearlPick/src/smart_ptr/scoped_array.cpp
 iostream
 -
 memory
@@ -20,5 +20,5 @@ memory
 boost/smart_ptr.hpp
 -
 scoped_array.hpp
-/home/lwh/code/CppPearlPick/src/smart_ptr/scoped_array.hpp
+/home/lwh/学习/CppPearlPick/src/smart_ptr/scoped_array.hpp
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/lwh/code/CppPearlPick/src/mySTL
+# Install script for directory: /home/lwh/学习/CppPearlPick/src/mySTL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
