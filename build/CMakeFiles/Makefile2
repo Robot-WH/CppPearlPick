@@ -130,7 +130,7 @@ src/smart_ptr/preinstall:
 src/smart_ptr/CMakeFiles/shared_ptr.dir/all:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/depend
 	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=5,6 "Built target shared_ptr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=7,8 "Built target shared_ptr"
 .PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/all
 
 # Include target in all.
@@ -167,7 +167,7 @@ clean: src/smart_ptr/CMakeFiles/shared_ptr.dir/clean
 src/smart_ptr/CMakeFiles/scoped_ptr.dir/all:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/depend
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=3,4 "Built target scoped_ptr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=5,6 "Built target scoped_ptr"
 .PHONY : src/smart_ptr/CMakeFiles/scoped_ptr.dir/all
 
 # Include target in all.
@@ -204,7 +204,7 @@ clean: src/smart_ptr/CMakeFiles/scoped_ptr.dir/clean
 src/smart_ptr/CMakeFiles/scoped_array.dir/all:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/depend
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=1,2 "Built target scoped_array"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=3,4 "Built target scoped_array"
 .PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/all
 
 # Include target in all.
@@ -239,11 +239,13 @@ clean: src/smart_ptr/CMakeFiles/scoped_array.dir/clean
 
 # Convenience name for "all" pass in the directory.
 src/designPattern/all: src/designPattern/CMakeFiles/strategy.dir/all
+src/designPattern/all: src/designPattern/CMakeFiles/factory.dir/all
 
 .PHONY : src/designPattern/all
 
 # Convenience name for "clean" pass in the directory.
 src/designPattern/clean: src/designPattern/CMakeFiles/strategy.dir/clean
+src/designPattern/clean: src/designPattern/CMakeFiles/factory.dir/clean
 
 .PHONY : src/designPattern/clean
 
@@ -259,7 +261,7 @@ src/designPattern/preinstall:
 src/designPattern/CMakeFiles/strategy.dir/all:
 	$(MAKE) -f src/designPattern/CMakeFiles/strategy.dir/build.make src/designPattern/CMakeFiles/strategy.dir/depend
 	$(MAKE) -f src/designPattern/CMakeFiles/strategy.dir/build.make src/designPattern/CMakeFiles/strategy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=7,8 "Built target strategy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=9,10 "Built target strategy"
 .PHONY : src/designPattern/CMakeFiles/strategy.dir/all
 
 # Include target in all.
@@ -286,6 +288,43 @@ src/designPattern/CMakeFiles/strategy.dir/clean:
 
 # clean rule for target.
 clean: src/designPattern/CMakeFiles/strategy.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/designPattern/CMakeFiles/factory.dir
+
+# All Build rule for target.
+src/designPattern/CMakeFiles/factory.dir/all:
+	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/depend
+	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=1,2 "Built target factory"
+.PHONY : src/designPattern/CMakeFiles/factory.dir/all
+
+# Include target in all.
+all: src/designPattern/CMakeFiles/factory.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/designPattern/CMakeFiles/factory.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/designPattern/CMakeFiles/factory.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+.PHONY : src/designPattern/CMakeFiles/factory.dir/rule
+
+# Convenience name for target.
+factory: src/designPattern/CMakeFiles/factory.dir/rule
+
+.PHONY : factory
+
+# clean rule for target.
+src/designPattern/CMakeFiles/factory.dir/clean:
+	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/clean
+.PHONY : src/designPattern/CMakeFiles/factory.dir/clean
+
+# clean rule for target.
+clean: src/designPattern/CMakeFiles/factory.dir/clean
 
 .PHONY : clean
 

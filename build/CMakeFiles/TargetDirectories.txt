@@ -10,5 +10,6 @@
 /home/lwh/code/CppPearlPick/build/src/smart_ptr/CMakeFiles/rebuild_cache.dir
 /home/lwh/code/CppPearlPick/build/src/smart_ptr/CMakeFiles/scoped_array.dir
 /home/lwh/code/CppPearlPick/build/src/designPattern/CMakeFiles/rebuild_cache.dir
-/home/lwh/code/CppPearlPick/build/src/designPattern/CMakeFiles/strategy.dir
 /home/lwh/code/CppPearlPick/build/src/designPattern/CMakeFiles/edit_cache.dir
+/home/lwh/code/CppPearlPick/build/src/designPattern/CMakeFiles/strategy.dir
+/home/lwh/code/CppPearlPick/build/src/designPattern/CMakeFiles/factory.dir

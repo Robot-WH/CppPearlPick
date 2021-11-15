@@ -162,6 +162,19 @@ strategy/fast:
 	$(MAKE) -f src/designPattern/CMakeFiles/strategy.dir/build.make src/designPattern/CMakeFiles/strategy.dir/build
 .PHONY : strategy/fast
 
+#=============================================================================
+# Target rules for targets named factory
+
+# Build rule for target.
+factory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 factory
+.PHONY : factory
+
+# fast build rule for target.
+factory/fast:
+	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/build
+.PHONY : factory/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +187,7 @@ help:
 	@echo "... scoped_ptr"
 	@echo "... scoped_array"
 	@echo "... strategy"
+	@echo "... factory"
 .PHONY : help
 
 
