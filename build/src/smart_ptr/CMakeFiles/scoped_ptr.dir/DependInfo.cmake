@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lwh/学习/CppPearlPick/src/smart_ptr/scoped_ptr.cpp" "/home/lwh/学习/CppPearlPick/build/src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.o"
+  "/home/lwh/code/CppPearlPick/src/smart_ptr/scoped_ptr.cpp" "/home/lwh/code/CppPearlPick/build/src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

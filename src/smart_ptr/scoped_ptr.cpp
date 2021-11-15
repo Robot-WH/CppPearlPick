@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <memory>
 #include <boost/smart_ptr.hpp>
