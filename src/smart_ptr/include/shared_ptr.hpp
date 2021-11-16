@@ -1,4 +1,3 @@
-
 #ifndef SHARED_PTR_HPP_
 #define SHARED_PTR_HPP_
 
@@ -144,7 +143,5 @@ namespace my {
             _T *p_;                    // 指向目标对象的指针
             shared_count pn_;       // 管理计数器 
     };  // class shared_ptr
-
 };  // namespace my
-
 #endif

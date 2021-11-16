@@ -65,7 +65,7 @@ class JPStrategyFactory : public StrategyFactoryBase {
 class Sales {
     public:
         Sales(boost::shared_ptr<StrategyFactoryBase> pFactory) {
-            strategy_ = pFactory->NewStrategy();     // 采用抽象工厂模式创建  
+            strategy_ = pFactory->NewStrategy();     // 采用工厂模式创建  
         }
         // 赋值
         Sales& operator=(const Sales &sl) {

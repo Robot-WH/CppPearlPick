@@ -52,11 +52,19 @@ class DogFactory : public AnimalFactory {
 class Zoo {
     public:
         Zoo() {
-            pFactory_ = nullptr;       // 赋值    隐式构造   boost::shared_ptr<AnimalFactory>(nullptr)
+            pFactory_ = nullptr;       // 赋值    
+            /**
+             *  查看 shared_ptr 的源码可以发现，对赋值进行了重载  
+             *  shared_ptr & operator=( boost::detail::sp_nullptr_t ) BOOST_SP_NOEXCEPT
+                    {
+                        this_type().swap(*this);     // boost中 shared_ptr 会将 内部指针 赋值为 0
+                        return *this;
+                    }
+             */
         }
         void WatchAnimal() {
             // 先由工厂生成一个动物
-            if(pFactory_ == nullptr) return;
+            if(pFactory_ == nullptr) return;       // Boost重载了shared_ptr的比较运算符 ，这里 == 会检查shared_ptr内部指针是否 == 0
             boost::shared_ptr<Animal> pAnimal_ = pFactory_->CreateAnimal();  
             pAnimal_->See();    
         }
