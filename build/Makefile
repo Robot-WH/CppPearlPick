@@ -150,6 +150,19 @@ scoped_array/fast:
 .PHONY : scoped_array/fast
 
 #=============================================================================
+# Target rules for targets named observer
+
+# Build rule for target.
+observer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 observer
+.PHONY : observer
+
+# fast build rule for target.
+observer/fast:
+	$(MAKE) -f src/designPattern/CMakeFiles/observer.dir/build.make src/designPattern/CMakeFiles/observer.dir/build
+.PHONY : observer/fast
+
+#=============================================================================
 # Target rules for targets named strategy
 
 # Build rule for target.
@@ -186,6 +199,7 @@ help:
 	@echo "... shared_ptr"
 	@echo "... scoped_ptr"
 	@echo "... scoped_array"
+	@echo "... observer"
 	@echo "... strategy"
 	@echo "... factory"
 .PHONY : help
