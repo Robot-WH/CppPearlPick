@@ -60,6 +60,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/smart_ptr/CMakeFiles/shared_ptr.dir/DependInfo.cmake"
   "src/smart_ptr/CMakeFiles/scoped_ptr.dir/DependInfo.cmake"
   "src/smart_ptr/CMakeFiles/scoped_array.dir/DependInfo.cmake"
+  "src/designPattern/CMakeFiles/observer2.dir/DependInfo.cmake"
   "src/designPattern/CMakeFiles/observer.dir/DependInfo.cmake"
   "src/designPattern/CMakeFiles/strategy.dir/DependInfo.cmake"
   "src/designPattern/CMakeFiles/factory.dir/DependInfo.cmake"
