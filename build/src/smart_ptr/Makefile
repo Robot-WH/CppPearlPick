@@ -48,18 +48,18 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lwh/code/CppPearlPick
+CMAKE_SOURCE_DIR = /home/lwh/学习/CppPearlPick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lwh/code/CppPearlPick/build
+CMAKE_BINARY_DIR = /home/lwh/学习/CppPearlPick/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/lwh/code/CppPearlPick/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles /home/lwh/code/CppPearlPick/build/src/smart_ptr/CMakeFiles/progress.marks
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+	cd /home/lwh/学习/CppPearlPick/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles /home/lwh/学习/CppPearlPick/build/src/smart_ptr/CMakeFiles/progress.marks
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/clean
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/preinstall
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/preinstall
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lwh/code/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lwh/学习/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/smart_ptr/CMakeFiles/shared_ptr.dir/rule:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
 .PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ shared_ptr: src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
 
 # fast build rule for target.
 shared_ptr/fast:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/build
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/build
 .PHONY : shared_ptr/fast
 
 # Convenience name for target.
 src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule
 .PHONY : src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule
 
 # Convenience name for target.
@@ -137,12 +137,12 @@ scoped_ptr: src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule
 
 # fast build rule for target.
 scoped_ptr/fast:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
 .PHONY : scoped_ptr/fast
 
 # Convenience name for target.
 src/smart_ptr/CMakeFiles/scoped_array.dir/rule:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_array.dir/rule
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_array.dir/rule
 .PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/rule
 
 # Convenience name for target.
@@ -152,7 +152,7 @@ scoped_array: src/smart_ptr/CMakeFiles/scoped_array.dir/rule
 
 # fast build rule for target.
 scoped_array/fast:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
 .PHONY : scoped_array/fast
 
 scoped_array.o: scoped_array.cpp.o
@@ -161,7 +161,7 @@ scoped_array.o: scoped_array.cpp.o
 
 # target to build an object file
 scoped_array.cpp.o:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.o
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.o
 .PHONY : scoped_array.cpp.o
 
 scoped_array.i: scoped_array.cpp.i
@@ -170,7 +170,7 @@ scoped_array.i: scoped_array.cpp.i
 
 # target to preprocess a source file
 scoped_array.cpp.i:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.i
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.i
 .PHONY : scoped_array.cpp.i
 
 scoped_array.s: scoped_array.cpp.s
@@ -179,7 +179,7 @@ scoped_array.s: scoped_array.cpp.s
 
 # target to generate assembly for a file
 scoped_array.cpp.s:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.s
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.s
 .PHONY : scoped_array.cpp.s
 
 scoped_ptr.o: scoped_ptr.cpp.o
@@ -188,7 +188,7 @@ scoped_ptr.o: scoped_ptr.cpp.o
 
 # target to build an object file
 scoped_ptr.cpp.o:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.o
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.o
 .PHONY : scoped_ptr.cpp.o
 
 scoped_ptr.i: scoped_ptr.cpp.i
@@ -197,7 +197,7 @@ scoped_ptr.i: scoped_ptr.cpp.i
 
 # target to preprocess a source file
 scoped_ptr.cpp.i:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.i
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.i
 .PHONY : scoped_ptr.cpp.i
 
 scoped_ptr.s: scoped_ptr.cpp.s
@@ -206,7 +206,7 @@ scoped_ptr.s: scoped_ptr.cpp.s
 
 # target to generate assembly for a file
 scoped_ptr.cpp.s:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.s
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.s
 .PHONY : scoped_ptr.cpp.s
 
 shared_ptr.o: shared_ptr.cpp.o
@@ -215,7 +215,7 @@ shared_ptr.o: shared_ptr.cpp.o
 
 # target to build an object file
 shared_ptr.cpp.o:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.o
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.o
 .PHONY : shared_ptr.cpp.o
 
 shared_ptr.i: shared_ptr.cpp.i
@@ -224,7 +224,7 @@ shared_ptr.i: shared_ptr.cpp.i
 
 # target to preprocess a source file
 shared_ptr.cpp.i:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.i
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.i
 .PHONY : shared_ptr.cpp.i
 
 shared_ptr.s: shared_ptr.cpp.s
@@ -233,7 +233,7 @@ shared_ptr.s: shared_ptr.cpp.s
 
 # target to generate assembly for a file
 shared_ptr.cpp.s:
-	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.s
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.s
 .PHONY : shared_ptr.cpp.s
 
 # Help Target
@@ -267,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lwh/code/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lwh/学习/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

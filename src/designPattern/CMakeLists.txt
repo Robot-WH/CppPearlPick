@@ -8,3 +8,7 @@ target_link_libraries(strategy
 add_executable(factory src/factory/main.cpp  )
 target_link_libraries(factory
 )
+
+add_executable(observer src/observer/main.cpp  )
+target_link_libraries(observer
+)
