@@ -4,13 +4,15 @@
 
 #include <iostream>
 #include <memory>
+#include <atomic>
+
 using namespace std;  
 
 namespace my {
 
     class sp_counted_base {
         public:
-            sp_counted_base() : use_count_(1) {
+            sp_counted_base() : count_use_(1) {
                 cout<<"ceate sp_counted_base"<<endl;
             }
 
@@ -20,24 +22,24 @@ namespace my {
 
             void release() {
                 // 判断是否需要真的析构  
-                if(--use_count_==0) {
+                if(--count_use_==0) {
                        dispose();    
                        delete this;  // 基类的析构函数设为virtual 这样 会递归的调用子类的析构  
                 }
             }
 
             short use_count() const {
-                return use_count_;
+                return count_use_;
             }
 
             void add_ref_copy() {
-                ++use_count_;  
+                ++count_use_;  
             }
 
             virtual void dispose() = 0;   
 
         private:
-            short use_count_;   
+            std::atomic<short> count_use_;  
     }; // class sp_counted_base
 
     template<class _T>
