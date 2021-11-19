@@ -121,6 +121,7 @@ namespace my {
                 }
                 return *this;  
             }
+            // @TODO  移动构造 ...
             
             _T const& operator*() {
                 return *(get());  
@@ -143,8 +144,8 @@ namespace my {
                 pn_.swap(other.pn_);  
             }
         private:
-            _T *p_;                    // 指向目标对象的指针
-            shared_count pn_;       // 管理计数器 
+            _T *p_;                                // 指向目标对象的指针
+            shared_count pn_;       // 控制器 
     };  // class shared_ptr
 
 };  // namespace my

@@ -70,7 +70,7 @@ class CookingRice : public CookingBase {
         // "return":""
 
 
-        //         "Copyright(C)": "Your Company",
+        // "Copyright(C)": "Your Company",
         // "FileName":"文件名", 
         // "Author":  "作者", 
         // "Version":  "版本", 
