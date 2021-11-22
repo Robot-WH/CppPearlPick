@@ -10,6 +10,7 @@
 /home/lwh/学习/CppPearlPick/build/src/smart_ptr/CMakeFiles/rebuild_cache.dir
 /home/lwh/学习/CppPearlPick/build/src/smart_ptr/CMakeFiles/scoped_array.dir
 /home/lwh/学习/CppPearlPick/build/src/designPattern/CMakeFiles/rebuild_cache.dir
+/home/lwh/学习/CppPearlPick/build/src/designPattern/CMakeFiles/observer2.dir
 /home/lwh/学习/CppPearlPick/build/src/designPattern/CMakeFiles/edit_cache.dir
 /home/lwh/学习/CppPearlPick/build/src/designPattern/CMakeFiles/observer.dir
 /home/lwh/学习/CppPearlPick/build/src/designPattern/CMakeFiles/strategy.dir

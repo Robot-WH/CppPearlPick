@@ -1,3 +1,4 @@
+
 #include "common.h"
 
 // 观察者模式   场景设计： 十字路口，汽车、自行车以及行人在观察红绿灯，并根据红绿灯的变化作出不同的反映
@@ -58,6 +59,12 @@ class TrafficLightMessage : public message<bool> {
 // 行人观察者  
 class WalkerObserver : public Observer<bool> {
     public: 
+        /**
+         * @brief: 
+         * @details: 
+         * @param {bool const&} trafficLight
+         * @return {*}
+         */        
         void Updata(bool const& trafficLight) override {
             if(trafficLight == 1) {
                 std::cout<<"red walker stop!!"<<std::endl;
