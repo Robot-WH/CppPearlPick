@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tuple
+
+# Build rule for target.
+tuple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tuple
+.PHONY : tuple
+
+# fast build rule for target.
+tuple/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/build
+.PHONY : tuple/fast
+
+#=============================================================================
+# Target rules for targets named test_remove_reference
+
+# Build rule for target.
+test_remove_reference: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_remove_reference
+.PHONY : test_remove_reference
+
+# fast build rule for target.
+test_remove_reference/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
+.PHONY : test_remove_reference/fast
+
+#=============================================================================
 # Target rules for targets named shared_ptr
 
 # Build rule for target.
@@ -209,6 +235,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... tuple"
+	@echo "... test_remove_reference"
 	@echo "... shared_ptr"
 	@echo "... scoped_ptr"
 	@echo "... scoped_array"

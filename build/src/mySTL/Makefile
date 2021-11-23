@@ -110,6 +110,90 @@ depend:
 	cd /home/lwh/code/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/mySTL/CMakeFiles/tuple.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/tuple.dir/rule
+.PHONY : src/mySTL/CMakeFiles/tuple.dir/rule
+
+# Convenience name for target.
+tuple: src/mySTL/CMakeFiles/tuple.dir/rule
+
+.PHONY : tuple
+
+# fast build rule for target.
+tuple/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/build
+.PHONY : tuple/fast
+
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_remove_reference.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_remove_reference.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_remove_reference.dir/rule
+
+# Convenience name for target.
+test_remove_reference: src/mySTL/CMakeFiles/test_remove_reference.dir/rule
+
+.PHONY : test_remove_reference
+
+# fast build rule for target.
+test_remove_reference/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
+.PHONY : test_remove_reference/fast
+
+src/test/test_remove_reference.o: src/test/test_remove_reference.cpp.o
+
+.PHONY : src/test/test_remove_reference.o
+
+# target to build an object file
+src/test/test_remove_reference.cpp.o:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.o
+.PHONY : src/test/test_remove_reference.cpp.o
+
+src/test/test_remove_reference.i: src/test/test_remove_reference.cpp.i
+
+.PHONY : src/test/test_remove_reference.i
+
+# target to preprocess a source file
+src/test/test_remove_reference.cpp.i:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.i
+.PHONY : src/test/test_remove_reference.cpp.i
+
+src/test/test_remove_reference.s: src/test/test_remove_reference.cpp.s
+
+.PHONY : src/test/test_remove_reference.s
+
+# target to generate assembly for a file
+src/test/test_remove_reference.cpp.s:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.s
+.PHONY : src/test/test_remove_reference.cpp.s
+
+src/tuple/tuple.o: src/tuple/tuple.cpp.o
+
+.PHONY : src/tuple/tuple.o
+
+# target to build an object file
+src/tuple/tuple.cpp.o:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/src/tuple/tuple.cpp.o
+.PHONY : src/tuple/tuple.cpp.o
+
+src/tuple/tuple.i: src/tuple/tuple.cpp.i
+
+.PHONY : src/tuple/tuple.i
+
+# target to preprocess a source file
+src/tuple/tuple.cpp.i:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/src/tuple/tuple.cpp.i
+.PHONY : src/tuple/tuple.cpp.i
+
+src/tuple/tuple.s: src/tuple/tuple.cpp.s
+
+.PHONY : src/tuple/tuple.s
+
+# target to generate assembly for a file
+src/tuple/tuple.cpp.s:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/src/tuple/tuple.cpp.s
+.PHONY : src/tuple/tuple.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -118,6 +202,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... tuple"
+	@echo "... test_remove_reference"
+	@echo "... src/test/test_remove_reference.o"
+	@echo "... src/test/test_remove_reference.i"
+	@echo "... src/test/test_remove_reference.s"
+	@echo "... src/tuple/tuple.o"
+	@echo "... src/tuple/tuple.i"
+	@echo "... src/tuple/tuple.s"
 .PHONY : help
 
 
