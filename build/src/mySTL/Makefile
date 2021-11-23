@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/mySTL/CMakeFiles/test_move_forward.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+# Convenience name for target.
+test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+.PHONY : test_move_forward
+
+# fast build rule for target.
+test_move_forward/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
+.PHONY : test_move_forward/fast
+
+# Convenience name for target.
 src/mySTL/CMakeFiles/tuple.dir/rule:
 	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/tuple.dir/rule
 .PHONY : src/mySTL/CMakeFiles/tuple.dir/rule
@@ -139,6 +154,33 @@ test_remove_reference: src/mySTL/CMakeFiles/test_remove_reference.dir/rule
 test_remove_reference/fast:
 	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
 .PHONY : test_remove_reference/fast
+
+src/test/test_move_forward.o: src/test/test_move_forward.cpp.o
+
+.PHONY : src/test/test_move_forward.o
+
+# target to build an object file
+src/test/test_move_forward.cpp.o:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.o
+.PHONY : src/test/test_move_forward.cpp.o
+
+src/test/test_move_forward.i: src/test/test_move_forward.cpp.i
+
+.PHONY : src/test/test_move_forward.i
+
+# target to preprocess a source file
+src/test/test_move_forward.cpp.i:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.i
+.PHONY : src/test/test_move_forward.cpp.i
+
+src/test/test_move_forward.s: src/test/test_move_forward.cpp.s
+
+.PHONY : src/test/test_move_forward.s
+
+# target to generate assembly for a file
+src/test/test_move_forward.cpp.s:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.s
+.PHONY : src/test/test_move_forward.cpp.s
 
 src/test/test_remove_reference.o: src/test/test_remove_reference.cpp.o
 
@@ -202,8 +244,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_move_forward"
 	@echo "... tuple"
 	@echo "... test_remove_reference"
+	@echo "... src/test/test_move_forward.o"
+	@echo "... src/test/test_move_forward.i"
+	@echo "... src/test/test_move_forward.s"
 	@echo "... src/test/test_remove_reference.o"
 	@echo "... src/test/test_remove_reference.i"
 	@echo "... src/test/test_remove_reference.s"
