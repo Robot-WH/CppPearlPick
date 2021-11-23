@@ -11,6 +11,8 @@ iostream
 -
 memory
 -
+atomic
+-
 
 /home/lwh/学习/CppPearlPick/src/smart_ptr/shared_ptr.cpp
 iostream

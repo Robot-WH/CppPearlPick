@@ -48,6 +48,7 @@ class CookingVege : public CookingBase {
         }
 };
 
+
 // 烹饪饭
 class CookingRice : public CookingBase {
     public:
