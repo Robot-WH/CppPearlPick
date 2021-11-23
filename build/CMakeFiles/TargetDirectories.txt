@@ -4,6 +4,9 @@
 /home/lwh/学习/CppPearlPick/build/src/CMakeFiles/edit_cache.dir
 /home/lwh/学习/CppPearlPick/build/src/mySTL/CMakeFiles/rebuild_cache.dir
 /home/lwh/学习/CppPearlPick/build/src/mySTL/CMakeFiles/edit_cache.dir
+/home/lwh/学习/CppPearlPick/build/src/mySTL/CMakeFiles/test_move_forward.dir
+/home/lwh/学习/CppPearlPick/build/src/mySTL/CMakeFiles/tuple.dir
+/home/lwh/学习/CppPearlPick/build/src/mySTL/CMakeFiles/test_remove_reference.dir
 /home/lwh/学习/CppPearlPick/build/src/smart_ptr/CMakeFiles/edit_cache.dir
 /home/lwh/学习/CppPearlPick/build/src/smart_ptr/CMakeFiles/shared_ptr.dir
 /home/lwh/学习/CppPearlPick/build/src/smart_ptr/CMakeFiles/scoped_ptr.dir

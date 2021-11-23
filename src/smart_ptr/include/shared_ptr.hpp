@@ -11,7 +11,7 @@ namespace my {
 
     class sp_counted_base {
         public:
-            sp_counted_base() : count_use_(1) {
+            sp_counted_base() {
                 cout<<"ceate sp_counted_base"<<endl;
             }
 
@@ -38,7 +38,7 @@ namespace my {
             virtual void dispose() = 0;   
 
         private:
-            std::atomic<short> count_use_;  
+            std::atomic<short> count_use_{1};     // atomic 不可用=初始化 ，不可用()
     }; // class sp_counted_base
 
     template<class _T>
@@ -137,8 +137,7 @@ namespace my {
             short use_count() const {
                 return pn_.use_count();
             }
-            void swap(shared_ptr<_T> &other)
-            {
+            void swap(shared_ptr<_T> &other) {
                 std::swap(p_, other.p_);   
                 pn_.swap(other.pn_);  
             }

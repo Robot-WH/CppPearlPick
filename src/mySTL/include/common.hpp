@@ -9,12 +9,37 @@
  */
 
 #pragma once 
+#include <iostream>
+#include "remove_reference.hpp"
 
-namespace my_stl {
+namespace mySTL {
 
-    
+  /**
+   * @brief:  std::move 的复现
+   * @details:  任何变量强制转换为右值引用
+   * @param param  万能引用    输入
+   * @return remove_reference_t<T>&& 右值引用   
+   */  
+  template<typename T>
+  decltype(auto) move(T&& param) {
+      using ReturnType = remove_reference_t<T>&&;    // 构造出右值引用
+      return static_cast<ReturnType>(param);            // 强制转换 
+  }
+
+  /**
+   * @brief: std::forward的复现
+   * @details: 有条件的执行强制转换为右值引用
+   * @param T param的型别   左值或左值引用
+   * @param param 左值引用，只能输入左值或左值引用
+   * @return param为左值
+   */  
+  template<typename T>
+  T&& forward(remove_reference_t<T>& param) {
+      return static_cast<T&&>(param);
+  }
+  
 
 
-};
+}; //  namespace mySTL  
 
 
