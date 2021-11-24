@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/mySTL/CMakeFiles/test_bind.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_bind.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_bind.dir/rule
+
+# Convenience name for target.
+test_bind: src/mySTL/CMakeFiles/test_bind.dir/rule
+
+.PHONY : test_bind
+
+# fast build rule for target.
+test_bind/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
+.PHONY : test_bind/fast
+
+# Convenience name for target.
 src/mySTL/CMakeFiles/test_tuple.dir/rule:
 	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_tuple.dir/rule
 .PHONY : src/mySTL/CMakeFiles/test_tuple.dir/rule
@@ -154,6 +169,33 @@ test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
 test_move_forward/fast:
 	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
 .PHONY : test_move_forward/fast
+
+src/test/test_bind.o: src/test/test_bind.cpp.o
+
+.PHONY : src/test/test_bind.o
+
+# target to build an object file
+src/test/test_bind.cpp.o:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/src/test/test_bind.cpp.o
+.PHONY : src/test/test_bind.cpp.o
+
+src/test/test_bind.i: src/test/test_bind.cpp.i
+
+.PHONY : src/test/test_bind.i
+
+# target to preprocess a source file
+src/test/test_bind.cpp.i:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/src/test/test_bind.cpp.i
+.PHONY : src/test/test_bind.cpp.i
+
+src/test/test_bind.s: src/test/test_bind.cpp.s
+
+.PHONY : src/test/test_bind.s
+
+# target to generate assembly for a file
+src/test/test_bind.cpp.s:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/src/test/test_bind.cpp.s
+.PHONY : src/test/test_bind.cpp.s
 
 src/test/test_move_forward.o: src/test/test_move_forward.cpp.o
 
@@ -243,10 +285,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... test_bind"
 	@echo "... rebuild_cache"
 	@echo "... test_tuple"
 	@echo "... test_remove_reference"
 	@echo "... test_move_forward"
+	@echo "... src/test/test_bind.o"
+	@echo "... src/test/test_bind.i"
+	@echo "... src/test/test_bind.s"
 	@echo "... src/test/test_move_forward.o"
 	@echo "... src/test/test_move_forward.i"
 	@echo "... src/test/test_move_forward.s"

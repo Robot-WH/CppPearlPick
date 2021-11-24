@@ -1,5 +1,3 @@
-
-
 include_directories( include/ )
 
 #message( WARNING "CMAKE_CURRENT_SOURCE_DIR: " ${CMAKE_CURRENT_SOURCE_DIR} )
@@ -14,6 +12,10 @@ target_link_libraries(test_move_forward
 
 add_executable(test_tuple src/test/test_tuple.cpp  )
 target_link_libraries(test_tuple
+)
+
+add_executable(test_bind src/test/test_bind.cpp  )
+target_link_libraries(test_bind
 )
 
 

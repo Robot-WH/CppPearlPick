@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_bind
+
+# Build rule for target.
+test_bind: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bind
+.PHONY : test_bind
+
+# fast build rule for target.
+test_bind/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
+.PHONY : test_bind/fast
+
+#=============================================================================
 # Target rules for targets named test_tuple
 
 # Build rule for target.
@@ -248,6 +261,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_bind"
 	@echo "... test_tuple"
 	@echo "... test_remove_reference"
 	@echo "... test_move_forward"
