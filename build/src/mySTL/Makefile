@@ -48,13 +48,24 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lwh/学习/CppPearlPick
+CMAKE_SOURCE_DIR = /home/lwh/code/CppPearlPick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lwh/学习/CppPearlPick/build
+CMAKE_BINARY_DIR = /home/lwh/code/CppPearlPick/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -67,27 +78,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/lwh/学习/CppPearlPick/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles /home/lwh/学习/CppPearlPick/build/src/mySTL/CMakeFiles/progress.marks
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	cd /home/lwh/code/CppPearlPick/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles /home/lwh/code/CppPearlPick/build/src/mySTL/CMakeFiles/progress.marks
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/clean
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,52 +97,37 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/preinstall
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/preinstall
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/lwh/学习/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/lwh/code/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-src/mySTL/CMakeFiles/test_move_forward.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/rule
-.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
+src/mySTL/CMakeFiles/test_tuple.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_tuple.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/rule
 
 # Convenience name for target.
-test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
+test_tuple: src/mySTL/CMakeFiles/test_tuple.dir/rule
 
-.PHONY : test_move_forward
+.PHONY : test_tuple
 
 # fast build rule for target.
-test_move_forward/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-.PHONY : test_move_forward/fast
-
-# Convenience name for target.
-src/mySTL/CMakeFiles/tuple.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/tuple.dir/rule
-.PHONY : src/mySTL/CMakeFiles/tuple.dir/rule
-
-# Convenience name for target.
-tuple: src/mySTL/CMakeFiles/tuple.dir/rule
-
-.PHONY : tuple
-
-# fast build rule for target.
-tuple/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/build
-.PHONY : tuple/fast
+test_tuple/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
+.PHONY : test_tuple/fast
 
 # Convenience name for target.
 src/mySTL/CMakeFiles/test_remove_reference.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_remove_reference.dir/rule
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_remove_reference.dir/rule
 .PHONY : src/mySTL/CMakeFiles/test_remove_reference.dir/rule
 
 # Convenience name for target.
@@ -152,8 +137,23 @@ test_remove_reference: src/mySTL/CMakeFiles/test_remove_reference.dir/rule
 
 # fast build rule for target.
 test_remove_reference/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
 .PHONY : test_remove_reference/fast
+
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_move_forward.dir/rule:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+# Convenience name for target.
+test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+.PHONY : test_move_forward
+
+# fast build rule for target.
+test_move_forward/fast:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
+.PHONY : test_move_forward/fast
 
 src/test/test_move_forward.o: src/test/test_move_forward.cpp.o
 
@@ -161,7 +161,7 @@ src/test/test_move_forward.o: src/test/test_move_forward.cpp.o
 
 # target to build an object file
 src/test/test_move_forward.cpp.o:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.o
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.o
 .PHONY : src/test/test_move_forward.cpp.o
 
 src/test/test_move_forward.i: src/test/test_move_forward.cpp.i
@@ -170,7 +170,7 @@ src/test/test_move_forward.i: src/test/test_move_forward.cpp.i
 
 # target to preprocess a source file
 src/test/test_move_forward.cpp.i:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.i
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.i
 .PHONY : src/test/test_move_forward.cpp.i
 
 src/test/test_move_forward.s: src/test/test_move_forward.cpp.s
@@ -179,7 +179,7 @@ src/test/test_move_forward.s: src/test/test_move_forward.cpp.s
 
 # target to generate assembly for a file
 src/test/test_move_forward.cpp.s:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.s
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/src/test/test_move_forward.cpp.s
 .PHONY : src/test/test_move_forward.cpp.s
 
 src/test/test_remove_reference.o: src/test/test_remove_reference.cpp.o
@@ -188,7 +188,7 @@ src/test/test_remove_reference.o: src/test/test_remove_reference.cpp.o
 
 # target to build an object file
 src/test/test_remove_reference.cpp.o:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.o
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.o
 .PHONY : src/test/test_remove_reference.cpp.o
 
 src/test/test_remove_reference.i: src/test/test_remove_reference.cpp.i
@@ -197,7 +197,7 @@ src/test/test_remove_reference.i: src/test/test_remove_reference.cpp.i
 
 # target to preprocess a source file
 src/test/test_remove_reference.cpp.i:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.i
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.i
 .PHONY : src/test/test_remove_reference.cpp.i
 
 src/test/test_remove_reference.s: src/test/test_remove_reference.cpp.s
@@ -206,35 +206,35 @@ src/test/test_remove_reference.s: src/test/test_remove_reference.cpp.s
 
 # target to generate assembly for a file
 src/test/test_remove_reference.cpp.s:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.s
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/src/test/test_remove_reference.cpp.s
 .PHONY : src/test/test_remove_reference.cpp.s
 
-src/tuple/tuple.o: src/tuple/tuple.cpp.o
+src/test/test_tuple.o: src/test/test_tuple.cpp.o
 
-.PHONY : src/tuple/tuple.o
+.PHONY : src/test/test_tuple.o
 
 # target to build an object file
-src/tuple/tuple.cpp.o:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/src/tuple/tuple.cpp.o
-.PHONY : src/tuple/tuple.cpp.o
+src/test/test_tuple.cpp.o:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/src/test/test_tuple.cpp.o
+.PHONY : src/test/test_tuple.cpp.o
 
-src/tuple/tuple.i: src/tuple/tuple.cpp.i
+src/test/test_tuple.i: src/test/test_tuple.cpp.i
 
-.PHONY : src/tuple/tuple.i
+.PHONY : src/test/test_tuple.i
 
 # target to preprocess a source file
-src/tuple/tuple.cpp.i:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/src/tuple/tuple.cpp.i
-.PHONY : src/tuple/tuple.cpp.i
+src/test/test_tuple.cpp.i:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/src/test/test_tuple.cpp.i
+.PHONY : src/test/test_tuple.cpp.i
 
-src/tuple/tuple.s: src/tuple/tuple.cpp.s
+src/test/test_tuple.s: src/test/test_tuple.cpp.s
 
-.PHONY : src/tuple/tuple.s
+.PHONY : src/test/test_tuple.s
 
 # target to generate assembly for a file
-src/tuple/tuple.cpp.s:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/src/tuple/tuple.cpp.s
-.PHONY : src/tuple/tuple.cpp.s
+src/test/test_tuple.cpp.s:
+	cd /home/lwh/code/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/src/test/test_tuple.cpp.s
+.PHONY : src/test/test_tuple.cpp.s
 
 # Help Target
 help:
@@ -242,20 +242,20 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_move_forward"
-	@echo "... tuple"
+	@echo "... rebuild_cache"
+	@echo "... test_tuple"
 	@echo "... test_remove_reference"
+	@echo "... test_move_forward"
 	@echo "... src/test/test_move_forward.o"
 	@echo "... src/test/test_move_forward.i"
 	@echo "... src/test/test_move_forward.s"
 	@echo "... src/test/test_remove_reference.o"
 	@echo "... src/test/test_remove_reference.i"
 	@echo "... src/test/test_remove_reference.s"
-	@echo "... src/tuple/tuple.o"
-	@echo "... src/tuple/tuple.i"
-	@echo "... src/tuple/tuple.s"
+	@echo "... src/test/test_tuple.o"
+	@echo "... src/test/test_tuple.i"
+	@echo "... src/test/test_tuple.s"
 .PHONY : help
 
 
@@ -267,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/lwh/学习/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/lwh/code/CppPearlPick/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

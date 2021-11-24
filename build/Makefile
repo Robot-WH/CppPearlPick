@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lwh/学习/CppPearlPick
+CMAKE_SOURCE_DIR = /home/lwh/code/CppPearlPick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lwh/学习/CppPearlPick/build
+CMAKE_BINARY_DIR = /home/lwh/code/CppPearlPick/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles /home/lwh/学习/CppPearlPick/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles /home/lwh/code/CppPearlPick/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,30 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_move_forward
+# Target rules for targets named test_tuple
 
 # Build rule for target.
-test_move_forward: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_move_forward
-.PHONY : test_move_forward
+test_tuple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_tuple
+.PHONY : test_tuple
 
 # fast build rule for target.
-test_move_forward/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-.PHONY : test_move_forward/fast
-
-#=============================================================================
-# Target rules for targets named tuple
-
-# Build rule for target.
-tuple: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tuple
-.PHONY : tuple
-
-# fast build rule for target.
-tuple/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/tuple.dir/build.make src/mySTL/CMakeFiles/tuple.dir/build
-.PHONY : tuple/fast
+test_tuple/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
+.PHONY : test_tuple/fast
 
 #=============================================================================
 # Target rules for targets named test_remove_reference
@@ -148,6 +135,19 @@ test_remove_reference: cmake_check_build_system
 test_remove_reference/fast:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
 .PHONY : test_remove_reference/fast
+
+#=============================================================================
+# Target rules for targets named test_move_forward
+
+# Build rule for target.
+test_move_forward: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_move_forward
+.PHONY : test_move_forward
+
+# fast build rule for target.
+test_move_forward/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
+.PHONY : test_move_forward/fast
 
 #=============================================================================
 # Target rules for targets named shared_ptr
@@ -248,9 +248,9 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_move_forward"
-	@echo "... tuple"
+	@echo "... test_tuple"
 	@echo "... test_remove_reference"
+	@echo "... test_move_forward"
 	@echo "... shared_ptr"
 	@echo "... scoped_ptr"
 	@echo "... scoped_array"
