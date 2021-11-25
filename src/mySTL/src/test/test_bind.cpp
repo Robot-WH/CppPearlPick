@@ -35,7 +35,13 @@ int main() {
     mySTL::binder<int(*)(int, int, int)> f{print};     // 不允许隐式类型转换 
     f(1,2,3); 
     Print pt;  
-    mySTL::mbinder<int(Print::*)(int, int, int), Print*> f2{&Print::draw, &pt}; 
+    mySTL::mbinder<int(Print::*)(int, int, int), Print> f2{&Print::draw, &pt}; 
+    f2(1,2,3);
+    auto f3 = mySTL::bind(&print);
+	f3(1, 2, 3);
+ 
+	auto f4 = mySTL::bind(&Print::draw, &pt);
+	f4(1, 2, 3);
     return 0;  
 }
 
