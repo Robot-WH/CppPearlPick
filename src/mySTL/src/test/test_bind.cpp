@@ -39,7 +39,6 @@ int main() {
     f2(1,2,3);
     auto f3 = mySTL::bind(&print);
 	f3(1, 2, 3);
- 
 	auto f4 = mySTL::bind(&Print::draw, &pt);
 	f4(1, 2, 3);
     return 0;  

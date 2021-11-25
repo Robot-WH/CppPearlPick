@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_bind
+# Target rules for targets named test_move_forward
 
 # Build rule for target.
-test_bind: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_bind
-.PHONY : test_bind
+test_move_forward: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_move_forward
+.PHONY : test_move_forward
 
 # fast build rule for target.
-test_bind/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
-.PHONY : test_bind/fast
+test_move_forward/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
+.PHONY : test_move_forward/fast
 
 #=============================================================================
 # Target rules for targets named test_tuple
@@ -137,6 +137,32 @@ test_tuple/fast:
 .PHONY : test_tuple/fast
 
 #=============================================================================
+# Target rules for targets named test_bind
+
+# Build rule for target.
+test_bind: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bind
+.PHONY : test_bind
+
+# fast build rule for target.
+test_bind/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
+.PHONY : test_bind/fast
+
+#=============================================================================
+# Target rules for targets named test_function
+
+# Build rule for target.
+test_function: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_function
+.PHONY : test_function
+
+# fast build rule for target.
+test_function/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_function.dir/build.make src/mySTL/CMakeFiles/test_function.dir/build
+.PHONY : test_function/fast
+
+#=============================================================================
 # Target rules for targets named test_remove_reference
 
 # Build rule for target.
@@ -148,19 +174,6 @@ test_remove_reference: cmake_check_build_system
 test_remove_reference/fast:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
 .PHONY : test_remove_reference/fast
-
-#=============================================================================
-# Target rules for targets named test_move_forward
-
-# Build rule for target.
-test_move_forward: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_move_forward
-.PHONY : test_move_forward
-
-# fast build rule for target.
-test_move_forward/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-.PHONY : test_move_forward/fast
 
 #=============================================================================
 # Target rules for targets named shared_ptr
@@ -261,10 +274,11 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_bind"
-	@echo "... test_tuple"
-	@echo "... test_remove_reference"
 	@echo "... test_move_forward"
+	@echo "... test_tuple"
+	@echo "... test_bind"
+	@echo "... test_function"
+	@echo "... test_remove_reference"
 	@echo "... shared_ptr"
 	@echo "... scoped_ptr"
 	@echo "... scoped_array"

@@ -87,18 +87,20 @@ src/preinstall: src/designPattern/preinstall
 # Directory level rules for directory src/mySTL
 
 # Convenience name for "all" pass in the directory.
-src/mySTL/all: src/mySTL/CMakeFiles/test_bind.dir/all
-src/mySTL/all: src/mySTL/CMakeFiles/test_tuple.dir/all
-src/mySTL/all: src/mySTL/CMakeFiles/test_remove_reference.dir/all
 src/mySTL/all: src/mySTL/CMakeFiles/test_move_forward.dir/all
+src/mySTL/all: src/mySTL/CMakeFiles/test_tuple.dir/all
+src/mySTL/all: src/mySTL/CMakeFiles/test_bind.dir/all
+src/mySTL/all: src/mySTL/CMakeFiles/test_function.dir/all
+src/mySTL/all: src/mySTL/CMakeFiles/test_remove_reference.dir/all
 
 .PHONY : src/mySTL/all
 
 # Convenience name for "clean" pass in the directory.
-src/mySTL/clean: src/mySTL/CMakeFiles/test_bind.dir/clean
-src/mySTL/clean: src/mySTL/CMakeFiles/test_tuple.dir/clean
-src/mySTL/clean: src/mySTL/CMakeFiles/test_remove_reference.dir/clean
 src/mySTL/clean: src/mySTL/CMakeFiles/test_move_forward.dir/clean
+src/mySTL/clean: src/mySTL/CMakeFiles/test_tuple.dir/clean
+src/mySTL/clean: src/mySTL/CMakeFiles/test_bind.dir/clean
+src/mySTL/clean: src/mySTL/CMakeFiles/test_function.dir/clean
+src/mySTL/clean: src/mySTL/CMakeFiles/test_remove_reference.dir/clean
 
 .PHONY : src/mySTL/clean
 
@@ -106,6 +108,80 @@ src/mySTL/clean: src/mySTL/CMakeFiles/test_move_forward.dir/clean
 src/mySTL/preinstall:
 
 .PHONY : src/mySTL/preinstall
+
+#=============================================================================
+# Target rules for target src/mySTL/CMakeFiles/test_move_forward.dir
+
+# All Build rule for target.
+src/mySTL/CMakeFiles/test_move_forward.dir/all:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/depend
+	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=19,20 "Built target test_move_forward"
+.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/all
+
+# Include target in all.
+all: src/mySTL/CMakeFiles/test_move_forward.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/mySTL/CMakeFiles/test_move_forward.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+# Convenience name for target.
+test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+.PHONY : test_move_forward
+
+# clean rule for target.
+src/mySTL/CMakeFiles/test_move_forward.dir/clean:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/clean
+.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/clean
+
+# clean rule for target.
+clean: src/mySTL/CMakeFiles/test_move_forward.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/mySTL/CMakeFiles/test_tuple.dir
+
+# All Build rule for target.
+src/mySTL/CMakeFiles/test_tuple.dir/all:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/depend
+	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=23,24 "Built target test_tuple"
+.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/all
+
+# Include target in all.
+all: src/mySTL/CMakeFiles/test_tuple.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/mySTL/CMakeFiles/test_tuple.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_tuple.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/rule
+
+# Convenience name for target.
+test_tuple: src/mySTL/CMakeFiles/test_tuple.dir/rule
+
+.PHONY : test_tuple
+
+# clean rule for target.
+src/mySTL/CMakeFiles/test_tuple.dir/clean:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/clean
+.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/clean
+
+# clean rule for target.
+clean: src/mySTL/CMakeFiles/test_tuple.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target src/mySTL/CMakeFiles/test_bind.dir
@@ -145,39 +221,39 @@ clean: src/mySTL/CMakeFiles/test_bind.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target src/mySTL/CMakeFiles/test_tuple.dir
+# Target rules for target src/mySTL/CMakeFiles/test_function.dir
 
 # All Build rule for target.
-src/mySTL/CMakeFiles/test_tuple.dir/all:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/depend
-	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=21,22 "Built target test_tuple"
-.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/all
+src/mySTL/CMakeFiles/test_function.dir/all:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_function.dir/build.make src/mySTL/CMakeFiles/test_function.dir/depend
+	$(MAKE) -f src/mySTL/CMakeFiles/test_function.dir/build.make src/mySTL/CMakeFiles/test_function.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=17,18 "Built target test_function"
+.PHONY : src/mySTL/CMakeFiles/test_function.dir/all
 
 # Include target in all.
-all: src/mySTL/CMakeFiles/test_tuple.dir/all
+all: src/mySTL/CMakeFiles/test_function.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/mySTL/CMakeFiles/test_tuple.dir/rule: cmake_check_build_system
+src/mySTL/CMakeFiles/test_function.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_tuple.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_function.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
-.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_function.dir/rule
 
 # Convenience name for target.
-test_tuple: src/mySTL/CMakeFiles/test_tuple.dir/rule
+test_function: src/mySTL/CMakeFiles/test_function.dir/rule
 
-.PHONY : test_tuple
-
-# clean rule for target.
-src/mySTL/CMakeFiles/test_tuple.dir/clean:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/clean
-.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/clean
+.PHONY : test_function
 
 # clean rule for target.
-clean: src/mySTL/CMakeFiles/test_tuple.dir/clean
+src/mySTL/CMakeFiles/test_function.dir/clean:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_function.dir/build.make src/mySTL/CMakeFiles/test_function.dir/clean
+.PHONY : src/mySTL/CMakeFiles/test_function.dir/clean
+
+# clean rule for target.
+clean: src/mySTL/CMakeFiles/test_function.dir/clean
 
 .PHONY : clean
 
@@ -188,7 +264,7 @@ clean: src/mySTL/CMakeFiles/test_tuple.dir/clean
 src/mySTL/CMakeFiles/test_remove_reference.dir/all:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/depend
 	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=19,20 "Built target test_remove_reference"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=21,22 "Built target test_remove_reference"
 .PHONY : src/mySTL/CMakeFiles/test_remove_reference.dir/all
 
 # Include target in all.
@@ -215,43 +291,6 @@ src/mySTL/CMakeFiles/test_remove_reference.dir/clean:
 
 # clean rule for target.
 clean: src/mySTL/CMakeFiles/test_remove_reference.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target src/mySTL/CMakeFiles/test_move_forward.dir
-
-# All Build rule for target.
-src/mySTL/CMakeFiles/test_move_forward.dir/all:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/depend
-	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=17,18 "Built target test_move_forward"
-.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/all
-
-# Include target in all.
-all: src/mySTL/CMakeFiles/test_move_forward.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/mySTL/CMakeFiles/test_move_forward.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
-.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
-
-# Convenience name for target.
-test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
-
-.PHONY : test_move_forward
-
-# clean rule for target.
-src/mySTL/CMakeFiles/test_move_forward.dir/clean:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/clean
-.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/clean
-
-# clean rule for target.
-clean: src/mySTL/CMakeFiles/test_move_forward.dir/clean
 
 .PHONY : clean
 

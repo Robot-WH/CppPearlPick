@@ -18,4 +18,8 @@ add_executable(test_bind src/test/test_bind.cpp  )
 target_link_libraries(test_bind
 )
 
+add_executable(test_function src/test/test_function.cpp  )
+target_link_libraries(test_function
+)
+
 
