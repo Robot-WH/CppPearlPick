@@ -28,7 +28,6 @@ namespace mySTL {
             private:
                 Fx m_f_;   
 
-
     }; // class binder
 
     /**
@@ -78,7 +77,5 @@ namespace mySTL {
     auto bind(Fx f, __class_type *c_o) {
         return mbinder<Fx, __class_type>(f, c_o);   
     }
-
-
 
 };  // namespace mySTL

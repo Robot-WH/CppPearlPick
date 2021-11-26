@@ -73,7 +73,7 @@ class Sales {
             strategy_ = sl.strategy_;  
         }
         // 移动构造
-        Sales& operator=(const Sales &&sl) {
+        Sales& operator=(Sales &&sl) {
             std::cout<<" move construct = "<<std::endl;
             strategy_ = sl.strategy_;  
         }
@@ -92,7 +92,7 @@ class Sales {
         }
        
     private:
-        boost::shared_ptr<TaxStrategy> strategy_;                                   // 计算的策略
+        boost::shared_ptr<TaxStrategy> strategy_;                                   // 税法计算的策略
 };
 
 

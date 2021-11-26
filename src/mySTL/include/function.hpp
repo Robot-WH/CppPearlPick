@@ -108,4 +108,4 @@ namespace mySTL {
             BinderWrapperBase<__return_type, __args_type ...>  *binder_wrapper_ = nullptr;  
     }; // class function
 
-};  
+}; // class mySTL   
