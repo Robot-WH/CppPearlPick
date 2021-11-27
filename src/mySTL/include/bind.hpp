@@ -10,24 +10,38 @@
 #pragma once 
 
 #include "common.hpp"
+#include "tuple.hpp"
+#include "index_sequence.hpp"
 
 namespace mySTL {
 
-    template<typename Fx>
+    template<typename Fx, typename... __Args_type>
     class binder {
             public: 
-                explicit binder(Fx f) : m_f_(f) {
+                binder(Fx f, __Args_type... args) : m_f_(f),  args_(args...) {
                     std::cout<<"Fx construct"<<std::endl;
                 }
 
                 template<typename ... __args_type>
                 auto operator()(__args_type ... args) {
-                        return (*m_f_)(args ...);
+                    //std::cout<<"operator()(__args_type ... args)"<<std::endl;
+                    return (*m_f_)(args ...);
+                }
+
+                auto operator()() {
+                    //std::cout<<"operator()()"<<std::endl;
+                    return Call(index_seq_);  
+                }
+
+                template<size_t... __index>
+                auto Call(index_sequence<__index...>) {
+                    return (*m_f_)(get<__index>(args_)...);  
                 }
 
             private:
+                tuple<__Args_type...> args_;     // 通过tuple 保存 函数参数  
+                make_index_sequence<sizeof...(__Args_type)> index_seq_;  // 生成模板序列  
                 Fx m_f_;   
-
     }; // class binder
 
     /**
@@ -37,10 +51,10 @@ namespace mySTL {
      * @param T 类的类型   
      * @return {*}
      */    
-    template<typename Fx, typename T>
+    template<typename Fx, typename T, typename... __Args_type>
     class mbinder {
         public:
-            mbinder(Fx f, T *t) : m_f_(f), m_t_(t) {}
+            mbinder(Fx f, T *t, __Args_type... args) : m_f_(f), m_t_(t), args_(args...) {}
 
             // 仿函数    需要调用类对象
             template<typename ... args_type>
@@ -48,9 +62,21 @@ namespace mySTL {
                 return (m_t_->*m_f_)(args ...);
             }
 
+            // 重载    使用默认参数
+            auto operator()() {
+                return Call(index_seq_);  
+            }
+
+            template<size_t... __index>
+            auto Call(index_sequence<__index...>) {
+                return (m_t_->*m_f_)(get<__index>(args_)...);  
+            }
+
         private:
             Fx m_f_;    // 函数指针
             T *m_t_;     // 类对象指针 
+            tuple<__Args_type...> args_;  
+            make_index_sequence<sizeof...(__Args_type)> index_seq_;  
     };
 
 
@@ -59,11 +85,12 @@ namespace mySTL {
      * @brief: bind的实现
      * @details:  对于普通函数重载  
      * @param Fx 绑定函数的型别 
-     * @return f 函数指针
+     * @param __Args_type 绑定的参数类型
+     * @return binder对象
      */    
-    template<typename Fx>
-    auto bind(Fx f) {
-        return binder<Fx>(f);   
+    template<typename Fx, typename... __Args_type>
+    auto bind(Fx f, __Args_type... args) {
+        return binder<Fx, __Args_type...>(f, args...);   
     }
 
     /**
@@ -73,9 +100,9 @@ namespace mySTL {
      * @param __class_type 类的型别
      * @return f 函数指针 
      */    
-    template<typename Fx, typename __class_type>
-    auto bind(Fx f, __class_type *c_o) {
-        return mbinder<Fx, __class_type>(f, c_o);   
+    template<typename Fx, typename __class_type, typename... __Args_type>
+    auto bind(Fx f, __class_type *c_o, __Args_type... args) {
+        return mbinder<Fx, __class_type, __Args_type...>(f, c_o, args...);   
     }
 
 };  // namespace mySTL

@@ -38,8 +38,6 @@ namespace mySTL {
       return static_cast<T&&>(param);
   }
   
-
-
 }; //  namespace mySTL  
 
 

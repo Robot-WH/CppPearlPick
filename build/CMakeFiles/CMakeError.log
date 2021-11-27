@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp
+Change Dir: /home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f5653/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f5653.dir/build.make CMakeFiles/cmTC_f5653.dir/build
-make[1]: 进入目录“/home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_f5653.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_f5653.dir/CheckSymbolExists.c.o   -c /home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_f5653
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5653.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_f5653.dir/CheckSymbolExists.c.o  -o cmTC_f5653 
-CMakeFiles/cmTC_f5653.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Run Build Command:"/usr/bin/make" "cmTC_0514c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0514c.dir/build.make CMakeFiles/cmTC_0514c.dir/build
+make[1]: 进入目录“/home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_0514c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0514c.dir/CheckSymbolExists.c.o   -c /home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_0514c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0514c.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_0514c.dir/CheckSymbolExists.c.o  -o cmTC_0514c 
+CMakeFiles/cmTC_0514c.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_f5653.dir/build.make:97: recipe for target 'cmTC_f5653' failed
-make[1]: *** [cmTC_f5653] Error 1
-make[1]: 离开目录“/home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp”
-Makefile:126: recipe for target 'cmTC_f5653/fast' failed
-make: *** [cmTC_f5653/fast] Error 2
+CMakeFiles/cmTC_0514c.dir/build.make:97: recipe for target 'cmTC_0514c' failed
+make[1]: *** [cmTC_0514c] Error 1
+make[1]: 离开目录“/home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_0514c/fast' failed
+make: *** [cmTC_0514c/fast] Error 2
 
-File /home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp
+Change Dir: /home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c1815/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c1815.dir/build.make CMakeFiles/cmTC_c1815.dir/build
-make[1]: 进入目录“/home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_c1815.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c1815.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_c1815
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1815.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_c1815.dir/CheckFunctionExists.c.o  -o cmTC_c1815 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_60a98/fast"
+/usr/bin/make -f CMakeFiles/cmTC_60a98.dir/build.make CMakeFiles/cmTC_60a98.dir/build
+make[1]: 进入目录“/home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_60a98.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_60a98.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_60a98
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60a98.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_60a98.dir/CheckFunctionExists.c.o  -o cmTC_60a98 -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c1815.dir/build.make:97: recipe for target 'cmTC_c1815' failed
-make[1]: *** [cmTC_c1815] Error 1
-make[1]: 离开目录“/home/lwh/code/CppPearlPick/build/CMakeFiles/CMakeTmp”
-Makefile:126: recipe for target 'cmTC_c1815/fast' failed
-make: *** [cmTC_c1815/fast] Error 2
+CMakeFiles/cmTC_60a98.dir/build.make:97: recipe for target 'cmTC_60a98' failed
+make[1]: *** [cmTC_60a98] Error 1
+make[1]: 离开目录“/home/lwh/学习/CppPearlPick/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_60a98/fast' failed
+make: *** [cmTC_60a98/fast] Error 2
 
 

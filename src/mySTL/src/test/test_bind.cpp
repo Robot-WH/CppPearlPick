@@ -38,9 +38,13 @@ int main() {
     mySTL::mbinder<int(Print::*)(int, int, int), Print> f2{&Print::draw, &pt}; 
     f2(1,2,3);
     auto f3 = mySTL::bind(&print);
-	f3(1, 2, 3);
+	f3(10, 20, 30);
 	auto f4 = mySTL::bind(&Print::draw, &pt);
 	f4(1, 2, 3);
+	auto f6 = mySTL::bind(&Print::draw, &pt, 4, 5, 6);
+	f6();
+	auto f5 = mySTL::bind(&print, 7, 8, 9);
+	f5();   
     return 0;  
 }
 

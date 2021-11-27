@@ -3,4 +3,4 @@
 
 src/smart_ptr/CMakeFiles/scoped_array.dir/scoped_array.cpp.o
  ../src/smart_ptr/include/scoped_array.hpp
- /home/lwh/code/CppPearlPick/src/smart_ptr/scoped_array.cpp
+ /home/lwh/学习/CppPearlPick/src/smart_ptr/scoped_array.cpp
