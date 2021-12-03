@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lwh/学习/CppPearlPick
+CMAKE_SOURCE_DIR = /home/lwh/code/CppPearlPick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lwh/学习/CppPearlPick/build
+CMAKE_BINARY_DIR = /home/lwh/code/CppPearlPick/build
 
 #=============================================================================
 # Directory level rules for directory src
@@ -116,7 +116,7 @@ src/mySTL/preinstall:
 src/mySTL/CMakeFiles/test_move_forward.dir/all:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/depend
 	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=19,20 "Built target test_move_forward"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=19,20 "Built target test_move_forward"
 .PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/all
 
 # Include target in all.
@@ -126,9 +126,9 @@ all: src/mySTL/CMakeFiles/test_move_forward.dir/all
 
 # Build rule for subdir invocation for target.
 src/mySTL/CMakeFiles/test_move_forward.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
 
 # Convenience name for target.
@@ -153,7 +153,7 @@ clean: src/mySTL/CMakeFiles/test_move_forward.dir/clean
 src/mySTL/CMakeFiles/test_tuple.dir/all:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/depend
 	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=23,24 "Built target test_tuple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=23,24 "Built target test_tuple"
 .PHONY : src/mySTL/CMakeFiles/test_tuple.dir/all
 
 # Include target in all.
@@ -163,9 +163,9 @@ all: src/mySTL/CMakeFiles/test_tuple.dir/all
 
 # Build rule for subdir invocation for target.
 src/mySTL/CMakeFiles/test_tuple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_tuple.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/mySTL/CMakeFiles/test_tuple.dir/rule
 
 # Convenience name for target.
@@ -190,7 +190,7 @@ clean: src/mySTL/CMakeFiles/test_tuple.dir/clean
 src/mySTL/CMakeFiles/test_bind.dir/all:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/depend
 	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=15,16 "Built target test_bind"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=15,16 "Built target test_bind"
 .PHONY : src/mySTL/CMakeFiles/test_bind.dir/all
 
 # Include target in all.
@@ -200,9 +200,9 @@ all: src/mySTL/CMakeFiles/test_bind.dir/all
 
 # Build rule for subdir invocation for target.
 src/mySTL/CMakeFiles/test_bind.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_bind.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/mySTL/CMakeFiles/test_bind.dir/rule
 
 # Convenience name for target.
@@ -227,7 +227,7 @@ clean: src/mySTL/CMakeFiles/test_bind.dir/clean
 src/mySTL/CMakeFiles/test_function.dir/all:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_function.dir/build.make src/mySTL/CMakeFiles/test_function.dir/depend
 	$(MAKE) -f src/mySTL/CMakeFiles/test_function.dir/build.make src/mySTL/CMakeFiles/test_function.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=17,18 "Built target test_function"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=17,18 "Built target test_function"
 .PHONY : src/mySTL/CMakeFiles/test_function.dir/all
 
 # Include target in all.
@@ -237,9 +237,9 @@ all: src/mySTL/CMakeFiles/test_function.dir/all
 
 # Build rule for subdir invocation for target.
 src/mySTL/CMakeFiles/test_function.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_function.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/mySTL/CMakeFiles/test_function.dir/rule
 
 # Convenience name for target.
@@ -264,7 +264,7 @@ clean: src/mySTL/CMakeFiles/test_function.dir/clean
 src/mySTL/CMakeFiles/test_remove_reference.dir/all:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/depend
 	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=21,22 "Built target test_remove_reference"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=21,22 "Built target test_remove_reference"
 .PHONY : src/mySTL/CMakeFiles/test_remove_reference.dir/all
 
 # Include target in all.
@@ -274,9 +274,9 @@ all: src/mySTL/CMakeFiles/test_remove_reference.dir/all
 
 # Build rule for subdir invocation for target.
 src/mySTL/CMakeFiles/test_remove_reference.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_remove_reference.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/mySTL/CMakeFiles/test_remove_reference.dir/rule
 
 # Convenience name for target.
@@ -323,7 +323,7 @@ src/smart_ptr/preinstall:
 src/smart_ptr/CMakeFiles/shared_ptr.dir/all:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/depend
 	$(MAKE) -f src/smart_ptr/CMakeFiles/shared_ptr.dir/build.make src/smart_ptr/CMakeFiles/shared_ptr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=11,12 "Built target shared_ptr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=11,12 "Built target shared_ptr"
 .PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/all
 
 # Include target in all.
@@ -333,9 +333,9 @@ all: src/smart_ptr/CMakeFiles/shared_ptr.dir/all
 
 # Build rule for subdir invocation for target.
 src/smart_ptr/CMakeFiles/shared_ptr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/shared_ptr.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/smart_ptr/CMakeFiles/shared_ptr.dir/rule
 
 # Convenience name for target.
@@ -360,7 +360,7 @@ clean: src/smart_ptr/CMakeFiles/shared_ptr.dir/clean
 src/smart_ptr/CMakeFiles/scoped_ptr.dir/all:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/depend
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=9,10 "Built target scoped_ptr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=9,10 "Built target scoped_ptr"
 .PHONY : src/smart_ptr/CMakeFiles/scoped_ptr.dir/all
 
 # Include target in all.
@@ -370,9 +370,9 @@ all: src/smart_ptr/CMakeFiles/scoped_ptr.dir/all
 
 # Build rule for subdir invocation for target.
 src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_ptr.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/smart_ptr/CMakeFiles/scoped_ptr.dir/rule
 
 # Convenience name for target.
@@ -397,7 +397,7 @@ clean: src/smart_ptr/CMakeFiles/scoped_ptr.dir/clean
 src/smart_ptr/CMakeFiles/scoped_array.dir/all:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/depend
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=7,8 "Built target scoped_array"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=7,8 "Built target scoped_array"
 .PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/all
 
 # Include target in all.
@@ -407,9 +407,9 @@ all: src/smart_ptr/CMakeFiles/scoped_array.dir/all
 
 # Build rule for subdir invocation for target.
 src/smart_ptr/CMakeFiles/scoped_array.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/smart_ptr/CMakeFiles/scoped_array.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/smart_ptr/CMakeFiles/scoped_array.dir/rule
 
 # Convenience name for target.
@@ -431,7 +431,7 @@ clean: src/smart_ptr/CMakeFiles/scoped_array.dir/clean
 # Directory level rules for directory src/designPattern
 
 # Convenience name for "all" pass in the directory.
-src/designPattern/all: src/designPattern/CMakeFiles/observer2.dir/all
+src/designPattern/all: src/designPattern/CMakeFiles/decorator.dir/all
 src/designPattern/all: src/designPattern/CMakeFiles/observer.dir/all
 src/designPattern/all: src/designPattern/CMakeFiles/strategy.dir/all
 src/designPattern/all: src/designPattern/CMakeFiles/factory.dir/all
@@ -439,7 +439,7 @@ src/designPattern/all: src/designPattern/CMakeFiles/factory.dir/all
 .PHONY : src/designPattern/all
 
 # Convenience name for "clean" pass in the directory.
-src/designPattern/clean: src/designPattern/CMakeFiles/observer2.dir/clean
+src/designPattern/clean: src/designPattern/CMakeFiles/decorator.dir/clean
 src/designPattern/clean: src/designPattern/CMakeFiles/observer.dir/clean
 src/designPattern/clean: src/designPattern/CMakeFiles/strategy.dir/clean
 src/designPattern/clean: src/designPattern/CMakeFiles/factory.dir/clean
@@ -452,39 +452,39 @@ src/designPattern/preinstall:
 .PHONY : src/designPattern/preinstall
 
 #=============================================================================
-# Target rules for target src/designPattern/CMakeFiles/observer2.dir
+# Target rules for target src/designPattern/CMakeFiles/decorator.dir
 
 # All Build rule for target.
-src/designPattern/CMakeFiles/observer2.dir/all:
-	$(MAKE) -f src/designPattern/CMakeFiles/observer2.dir/build.make src/designPattern/CMakeFiles/observer2.dir/depend
-	$(MAKE) -f src/designPattern/CMakeFiles/observer2.dir/build.make src/designPattern/CMakeFiles/observer2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=5,6 "Built target observer2"
-.PHONY : src/designPattern/CMakeFiles/observer2.dir/all
+src/designPattern/CMakeFiles/decorator.dir/all:
+	$(MAKE) -f src/designPattern/CMakeFiles/decorator.dir/build.make src/designPattern/CMakeFiles/decorator.dir/depend
+	$(MAKE) -f src/designPattern/CMakeFiles/decorator.dir/build.make src/designPattern/CMakeFiles/decorator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=1,2 "Built target decorator"
+.PHONY : src/designPattern/CMakeFiles/decorator.dir/all
 
 # Include target in all.
-all: src/designPattern/CMakeFiles/observer2.dir/all
+all: src/designPattern/CMakeFiles/decorator.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/designPattern/CMakeFiles/observer2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/designPattern/CMakeFiles/observer2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
-.PHONY : src/designPattern/CMakeFiles/observer2.dir/rule
+src/designPattern/CMakeFiles/decorator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/designPattern/CMakeFiles/decorator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+.PHONY : src/designPattern/CMakeFiles/decorator.dir/rule
 
 # Convenience name for target.
-observer2: src/designPattern/CMakeFiles/observer2.dir/rule
+decorator: src/designPattern/CMakeFiles/decorator.dir/rule
 
-.PHONY : observer2
-
-# clean rule for target.
-src/designPattern/CMakeFiles/observer2.dir/clean:
-	$(MAKE) -f src/designPattern/CMakeFiles/observer2.dir/build.make src/designPattern/CMakeFiles/observer2.dir/clean
-.PHONY : src/designPattern/CMakeFiles/observer2.dir/clean
+.PHONY : decorator
 
 # clean rule for target.
-clean: src/designPattern/CMakeFiles/observer2.dir/clean
+src/designPattern/CMakeFiles/decorator.dir/clean:
+	$(MAKE) -f src/designPattern/CMakeFiles/decorator.dir/build.make src/designPattern/CMakeFiles/decorator.dir/clean
+.PHONY : src/designPattern/CMakeFiles/decorator.dir/clean
+
+# clean rule for target.
+clean: src/designPattern/CMakeFiles/decorator.dir/clean
 
 .PHONY : clean
 
@@ -495,7 +495,7 @@ clean: src/designPattern/CMakeFiles/observer2.dir/clean
 src/designPattern/CMakeFiles/observer.dir/all:
 	$(MAKE) -f src/designPattern/CMakeFiles/observer.dir/build.make src/designPattern/CMakeFiles/observer.dir/depend
 	$(MAKE) -f src/designPattern/CMakeFiles/observer.dir/build.make src/designPattern/CMakeFiles/observer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=3,4 "Built target observer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=5,6 "Built target observer"
 .PHONY : src/designPattern/CMakeFiles/observer.dir/all
 
 # Include target in all.
@@ -505,9 +505,9 @@ all: src/designPattern/CMakeFiles/observer.dir/all
 
 # Build rule for subdir invocation for target.
 src/designPattern/CMakeFiles/observer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/designPattern/CMakeFiles/observer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/designPattern/CMakeFiles/observer.dir/rule
 
 # Convenience name for target.
@@ -532,7 +532,7 @@ clean: src/designPattern/CMakeFiles/observer.dir/clean
 src/designPattern/CMakeFiles/strategy.dir/all:
 	$(MAKE) -f src/designPattern/CMakeFiles/strategy.dir/build.make src/designPattern/CMakeFiles/strategy.dir/depend
 	$(MAKE) -f src/designPattern/CMakeFiles/strategy.dir/build.make src/designPattern/CMakeFiles/strategy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=13,14 "Built target strategy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=13,14 "Built target strategy"
 .PHONY : src/designPattern/CMakeFiles/strategy.dir/all
 
 # Include target in all.
@@ -542,9 +542,9 @@ all: src/designPattern/CMakeFiles/strategy.dir/all
 
 # Build rule for subdir invocation for target.
 src/designPattern/CMakeFiles/strategy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/designPattern/CMakeFiles/strategy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/designPattern/CMakeFiles/strategy.dir/rule
 
 # Convenience name for target.
@@ -569,7 +569,7 @@ clean: src/designPattern/CMakeFiles/strategy.dir/clean
 src/designPattern/CMakeFiles/factory.dir/all:
 	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/depend
 	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/学习/CppPearlPick/build/CMakeFiles --progress-num=1,2 "Built target factory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lwh/code/CppPearlPick/build/CMakeFiles --progress-num=3,4 "Built target factory"
 .PHONY : src/designPattern/CMakeFiles/factory.dir/all
 
 # Include target in all.
@@ -579,9 +579,9 @@ all: src/designPattern/CMakeFiles/factory.dir/all
 
 # Build rule for subdir invocation for target.
 src/designPattern/CMakeFiles/factory.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/designPattern/CMakeFiles/factory.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
 .PHONY : src/designPattern/CMakeFiles/factory.dir/rule
 
 # Convenience name for target.

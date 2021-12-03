@@ -1,4 +1,4 @@
-# Install script for directory: /home/lwh/学习/CppPearlPick/src/smart_ptr
+# Install script for directory: /home/lwh/code/CppPearlPick/src/smart_ptr
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

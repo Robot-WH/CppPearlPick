@@ -32,26 +32,23 @@ class Print {
 
 template<typename ... __args_type>
 class printTuple {
-
 	public:
 		printTuple(__args_type ... args) : my_args_(args ...) {} 
 
 		// 仿函数
-		auto operator()() {
-			return print(mk_ind_seq_);  
+		template<typename... __args_in_type>   // __args_type 为除了占位符号之外的参数  
+		auto operator()(__args_in_type... args) {
+			return print(mk_ind_seq_, args...);  
 		}
 
 		template<size_t ... __index, typename... __Args>    //  __Args 是占位符参数  
 		void print(mySTL::index_sequence<__index...>, __Args... args) {
-			int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
+			int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>::get_value(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
 		}
-
-
 
 	private:
 		mySTL::make_index_sequence<sizeof...(__args_type)> mk_ind_seq_;     // 构造出 index_sequence 
-		mySTL::tuple<__args_type ...> my_args_;      // 保存全部的参数信息  
-
+		mySTL::tuple<__args_type ...> my_args_;                                                               // 保存全部的参数信息  
 };
 
 // 构造 printTuple 对象  
@@ -79,7 +76,8 @@ int main() {
 	auto print_tuple = make_printTuple('c', 1, "hello", 3.3, "yeah", 100, -89, 7.67884);
 	print_tuple();  
 
-
+	auto test_placeholder = make_printTuple("hello", mySTL::placeholders::_2, 45, mySTL::placeholders::_1, mySTL::placeholders::_4, mySTL::placeholders::_3);    
+	test_placeholder(111, 999, "world", "WH");  
 
     return 0;  
 }

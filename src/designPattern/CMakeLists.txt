@@ -12,9 +12,9 @@ target_link_libraries(factory
 add_executable(observer src/observer/main.cpp  )
 target_link_libraries(observer
 )
-add_executable(observer2 src/observer/main2.cpp  )
-target_link_libraries(observer
-)
+# add_executable(observer2 src/observer/main2.cpp  )
+# target_link_libraries(observer
+# )
 
 add_executable(decorator src/decorator/main.cpp  )
 target_link_libraries(decorator

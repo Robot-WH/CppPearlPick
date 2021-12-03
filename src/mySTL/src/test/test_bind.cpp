@@ -23,7 +23,6 @@ public:
 	}
 };
 
-
  int print(int a, int b, int c)
 {
 	std::cout << "a = " << a << "," << "b = " << b << "," << "c = " << c << "\n";
@@ -31,7 +30,6 @@ public:
 }
  
 int main() {
-
     mySTL::binder<int(*)(int, int, int)> f{print};     // 不允许隐式类型转换 
     f(1,2,3); 
     Print pt;  
@@ -45,7 +43,6 @@ int main() {
 	f6();
 	auto f5 = mySTL::bind(&print, 7, 8, 9);
 	f5();   
-	
     return 0;  
 }
 

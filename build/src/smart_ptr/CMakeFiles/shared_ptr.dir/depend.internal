@@ -3,4 +3,4 @@
 
 src/smart_ptr/CMakeFiles/shared_ptr.dir/shared_ptr.cpp.o
  ../src/smart_ptr/include/shared_ptr.hpp
- /home/lwh/学习/CppPearlPick/src/smart_ptr/shared_ptr.cpp
+ /home/lwh/code/CppPearlPick/src/smart_ptr/shared_ptr.cpp
