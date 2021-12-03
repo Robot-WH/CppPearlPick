@@ -12,6 +12,7 @@
 #include "function.hpp"
 #include "tuple.hpp"
 #include "index_sequence.hpp"
+#include "param_wrapper.hpp"
 
 class Print {
 	public:
@@ -40,14 +41,16 @@ class printTuple {
 			return print(mk_ind_seq_);  
 		}
 
-		template<size_t ... __index>
-		void print(mySTL::index_sequence<__index...>) {
-			int array[] = {(std::cout<<mySTL::get<__index>(my_args_)<<std::endl, 0)...};
+		template<size_t ... __index, typename... __Args>    //  __Args 是占位符参数  
+		void print(mySTL::index_sequence<__index...>, __Args... args) {
+			int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
 		}
+
+
 
 	private:
 		mySTL::make_index_sequence<sizeof...(__args_type)> mk_ind_seq_;     // 构造出 index_sequence 
-		mySTL::tuple<__args_type ...> my_args_;   
+		mySTL::tuple<__args_type ...> my_args_;      // 保存全部的参数信息  
 
 };
 
@@ -75,6 +78,8 @@ int main() {
 
 	auto print_tuple = make_printTuple('c', 1, "hello", 3.3, "yeah", 100, -89, 7.67884);
 	print_tuple();  
+
+
 
     return 0;  
 }

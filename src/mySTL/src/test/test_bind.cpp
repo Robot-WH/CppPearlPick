@@ -45,6 +45,7 @@ int main() {
 	f6();
 	auto f5 = mySTL::bind(&print, 7, 8, 9);
 	f5();   
+	
     return 0;  
 }
 
