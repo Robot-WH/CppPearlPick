@@ -2,6 +2,7 @@
 #include <memory>
 #include <boost/smart_ptr.hpp>
 #include "scoped_ptr.hpp"
+#include "make_scoped.hpp"
 
 using namespace std;
 using namespace boost;  

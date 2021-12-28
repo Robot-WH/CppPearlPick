@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/lwh/code/CppPearlPick/src/smart_ptr/include 
+CXX_INCLUDES = -I/home/lwh/学习/CppPearlPick/src/smart_ptr/include 
 

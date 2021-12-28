@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lwh/code/CppPearlPick
+CMAKE_SOURCE_DIR = /home/lwh/学习/CppPearlPick
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lwh/code/CppPearlPick/build
+CMAKE_BINARY_DIR = /home/lwh/学习/CppPearlPick/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles /home/lwh/code/CppPearlPick/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles /home/lwh/学习/CppPearlPick/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/code/CppPearlPick/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lwh/学习/CppPearlPick/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,71 +109,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named test_move_forward
-
-# Build rule for target.
-test_move_forward: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_move_forward
-.PHONY : test_move_forward
-
-# fast build rule for target.
-test_move_forward/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-.PHONY : test_move_forward/fast
-
-#=============================================================================
-# Target rules for targets named test_tuple
-
-# Build rule for target.
-test_tuple: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_tuple
-.PHONY : test_tuple
-
-# fast build rule for target.
-test_tuple/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
-.PHONY : test_tuple/fast
-
-#=============================================================================
-# Target rules for targets named test_bind
-
-# Build rule for target.
-test_bind: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_bind
-.PHONY : test_bind
-
-# fast build rule for target.
-test_bind/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
-.PHONY : test_bind/fast
-
-#=============================================================================
-# Target rules for targets named test_function
-
-# Build rule for target.
-test_function: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_function
-.PHONY : test_function
-
-# fast build rule for target.
-test_function/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_function.dir/build.make src/mySTL/CMakeFiles/test_function.dir/build
-.PHONY : test_function/fast
-
-#=============================================================================
-# Target rules for targets named test_remove_reference
-
-# Build rule for target.
-test_remove_reference: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_remove_reference
-.PHONY : test_remove_reference
-
-# fast build rule for target.
-test_remove_reference/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
-.PHONY : test_remove_reference/fast
 
 #=============================================================================
 # Target rules for targets named shared_ptr
@@ -274,11 +209,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test_move_forward"
-	@echo "... test_tuple"
-	@echo "... test_bind"
-	@echo "... test_function"
-	@echo "... test_remove_reference"
 	@echo "... shared_ptr"
 	@echo "... scoped_ptr"
 	@echo "... scoped_array"

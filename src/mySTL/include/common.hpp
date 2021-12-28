@@ -27,11 +27,11 @@ namespace mySTL {
   }
 
   /**
-   * @brief: std::forward的复现
+   * @brief: std::forward的复现，用法是  forward<T>(param)
    * @details: 有条件的执行强制转换为右值引用
-   * @param T param的型别   左值或左值引用
+   * @param T  通过上级函数 万能引用推导出来的，要么 左值，要么左值引用
    * @param param 左值引用，只能输入左值或左值引用
-   * @return param为左值
+   * @return param T为左值则return 右值 ， T为左值引用 则return 左值引用
    */  
   template<typename T>
   T&& forward(remove_reference_t<T>& param) {

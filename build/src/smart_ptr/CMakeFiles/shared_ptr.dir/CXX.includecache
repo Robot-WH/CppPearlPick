@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../src/smart_ptr/include/make_shared.hpp
+shared_ptr.hpp
+../src/smart_ptr/include/shared_ptr.hpp
+
 ../src/smart_ptr/include/shared_ptr.hpp
 iostream
 -
@@ -14,7 +18,7 @@ memory
 atomic
 -
 
-/home/lwh/code/CppPearlPick/src/smart_ptr/shared_ptr.cpp
+/home/lwh/学习/CppPearlPick/src/smart_ptr/shared_ptr.cpp
 iostream
 -
 memory
@@ -22,5 +26,7 @@ memory
 boost/smart_ptr.hpp
 -
 shared_ptr.hpp
-/home/lwh/code/CppPearlPick/src/smart_ptr/shared_ptr.hpp
+/home/lwh/学习/CppPearlPick/src/smart_ptr/shared_ptr.hpp
+make_shared.hpp
+/home/lwh/学习/CppPearlPick/src/smart_ptr/make_shared.hpp
 

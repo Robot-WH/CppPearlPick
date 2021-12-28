@@ -43,7 +43,9 @@ class printTuple {
 
 		template<size_t ... __index, typename... __Args>    //  __Args 是占位符参数  
 		void print(mySTL::index_sequence<__index...>, __Args... args) {
-			int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>::get_value(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
+			// int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>::get_value(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
+			int array[] = {(std::cout<<mySTL::Select_fixer<decltype(mySTL::get<__index>(my_args_))>::_Fix(mySTL::get<__index>(my_args_), 
+			args...)<<std::endl, 0)...};
 		}
 
 	private:
