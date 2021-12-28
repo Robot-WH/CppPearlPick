@@ -78,6 +78,23 @@ namespace my {
                     pi_->add_ref_copy();  
                 }
             }
+            // 移动构造
+            shared_count(shared_count&& sc) {
+                std::cout<<"shared_count move construct!"<<std::endl;
+                pi_ = sc.pi_;
+                sc.pi_ = nullptr;  
+            }
+            // 移动赋值
+            shared_count& operator=(shared_count&& sc) {
+                std::cout<<"shared_count move operator!"<<std::endl;
+                if(&sc == this) {   // 右值的内存地址  并不会发生变化
+                    std::cout<<"shared_count: can't move itself! "<<std::endl;
+                    return *this;
+                }
+                this->pi_ = sc.pi_;
+                sc.pi_ = nullptr;  
+                return *this; 
+            }
 
             ~shared_count() {
                 cout<<"free shared_count"<<endl;
@@ -112,6 +129,13 @@ namespace my {
             }
             // 拷贝构造函数   核心！！！
             shared_ptr(const shared_ptr<_T>& ptr):p_(ptr.p_), pn_(ptr.pn_) {}
+            // @TODO  移动构造 ...
+            shared_ptr(shared_ptr<_T>&& ptr) : pn_(std::move(ptr.pn_)) {
+                std::cout<<"shared_ptr move construct!"<<std::endl;
+                p_ = nullptr;
+                std::swap(p_, ptr.p_);   
+                //pn_ = std::move(ptr.pn_);
+            }
             // 赋值构造函数
             typedef shared_ptr<_T> this_type;
             shared_ptr<_T>& operator=(const shared_ptr<_T> &sp) {
@@ -124,7 +148,18 @@ namespace my {
                 }
                 return *this;  
             }
-            // @TODO  移动构造 ...
+            // 移动赋值
+            shared_ptr<_T>& operator=(shared_ptr<_T> &&sp) {
+                std::cout<<"shared_ptr move operator!"<<std::endl;
+                if(&sp == this) {   // 右值的内存地址  并不会发生变化
+                    std::cout<<"shared_ptr: can't move itself! "<<std::endl;
+                    return *this;
+                }
+                std::swap(p_, sp.p_);   
+                sp.p_ =  nullptr; 
+                pn_ = std::move(sp.pn_);
+                return *this;  
+            }
             
             _T const& operator*() {
                 return *(get());  

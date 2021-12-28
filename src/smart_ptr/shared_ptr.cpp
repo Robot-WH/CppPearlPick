@@ -36,6 +36,14 @@ int main()
     sp1 = sp; 
     cout<<"shared_ptr point: "<<*sp1<< endl;
     cout<<"use count(): "<<sp1.use_count()<<endl;
+    // 移动
+    my::shared_ptr<int> sp2(std::move(sp1));
+    cout<<"shared_ptr point: "<<*sp2<< endl;
+    cout<<"use count(): "<<sp2.use_count()<<endl;
+    // 移动自身
+    sp2 = std::move(sp2);  
+    cout<<"shared_ptr point: "<<*sp2<< endl;
+    cout<<"use count(): "<<sp2.use_count()<<endl;
 
     return 0;  
 }
