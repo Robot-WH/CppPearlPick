@@ -19,7 +19,7 @@ namespace mySTL {
         static constexpr __T value = v;                                    ///  用value 保存值  
         using value_type = __T;
         using type = integral_constant<__T, v>;
-        constexpr operator value_type() {return value;}    // ？？？？？？？？？？？？？？？？没看懂  ？？？？？？？？？？？
+        //constexpr operator value_type() {return value;}    
     }; 
 
     typedef integral_constant<bool, true> true_type;

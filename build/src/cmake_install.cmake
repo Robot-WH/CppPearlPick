@@ -39,6 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/lwh/学习/CppPearlPick/build/src/mySTL/cmake_install.cmake")
   include("/home/lwh/学习/CppPearlPick/build/src/smart_ptr/cmake_install.cmake")
   include("/home/lwh/学习/CppPearlPick/build/src/designPattern/cmake_install.cmake")
 

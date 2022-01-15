@@ -12,7 +12,7 @@
 #include "function.hpp"
 #include "tuple.hpp"
 #include "index_sequence.hpp"
-#include "param_wrapper.hpp"
+#include "select_fixer.hpp"
 
 class Print {
 	public:
@@ -43,9 +43,14 @@ class printTuple {
 
 		template<size_t ... __index, typename... __Args>    //  __Args 是占位符参数  
 		void print(mySTL::index_sequence<__index...>, __Args... args) {
-			// int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>::get_value(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
-			int array[] = {(std::cout<<mySTL::Select_fixer<decltype(mySTL::get<__index>(my_args_))>::_Fix(mySTL::get<__index>(my_args_), 
-			args...)<<std::endl, 0)...};
+			//int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>::get_value(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
+			int array2[] = {(std::cout<<mySTL::Select_fixer<decltype(mySTL::get<__index>(my_args_))>::_Fix(mySTL::get<__index>(my_args_),  args...)<<std::endl, 0)...};
+			//std::cout<<"Select_fixer: "<<mySTL::Select_fixer<decltype(mySTL::get<1>(my_args_))>::_Fix(mySTL::get<1>(my_args_),  args...)<<std::endl;;  
+			//mySTL::Select_fixer<decltype(mySTL::placeholders::_1)> s_f;  
+			//mySTL::Select_fixer<decltype(mySTL::get<1>(my_args_))>::_Fix(mySTL::get<1>(my_args_), args...);  
+			
+			//std::cout<<mySTL::is_placeholder_v<12><<std::endl;
+			//std::cout<<mySTL::Select_fixer<decltype(mySTL::get<1>(my_args_))>::_Fix(mySTL::get<1>(my_args_), args...)<<std::endl;  
 		}
 
 	private:
@@ -58,7 +63,6 @@ template<typename... args_type>
 printTuple<args_type...> make_printTuple(args_type... args) {
 	return printTuple<args_type...>(args...);
 }
-
 
 int main() {
 
@@ -75,8 +79,8 @@ int main() {
 	// TODO: 实现直接用函数赋值  
 	// mySTL::function<std::string(int, int, int)> f4 = print;  
 
-	auto print_tuple = make_printTuple('c', 1, "hello", 3.3, "yeah", 100, -89, 7.67884);
-	print_tuple();  
+	// auto print_tuple = make_printTuple('c', 1, "hello", 3.3, "yeah", 100, -89, 7.67884);
+	// print_tuple();  
 
 	auto test_placeholder = make_printTuple("hello", mySTL::placeholders::_2, 45, mySTL::placeholders::_1, mySTL::placeholders::_4, mySTL::placeholders::_3);    
 	test_placeholder(111, 999, "world", "WH");  
