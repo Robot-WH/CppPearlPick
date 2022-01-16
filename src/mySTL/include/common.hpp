@@ -34,7 +34,7 @@ namespace mySTL {
    * @return param T为左值则return 右值 ， T为左值引用 则return 左值引用
    */  
   template<typename T>
-  T&& forward(remove_reference_t<T>& param) {
+  T&& forward_(remove_reference_t<T>& param) {
       return static_cast<T&&>(param);
   }
   

@@ -32,7 +32,7 @@ namespace mySTL {
              * @param __args_type 函数的输入参数类型
              * @return __return_type 注意 由于是 虚函数  所以这里不能用auto返回  ，所以采用模板
              */            
-            virtual __return_type Call(__args_type ... args) = 0;  
+            virtual __return_type Call(__args_type... args) = 0;  
     };  // class BinderWrapperBase
 
     template<typename __binder_type, typename __return_type, typename ... __args_type>
@@ -46,7 +46,7 @@ namespace mySTL {
              * @param __args_type 函数的输入参数类型
              * @return __return_type 模板参数  
              */            
-            __return_type Call(__args_type ... args) override {
+            __return_type Call(__args_type... args) override {
                 return binder_(args ...);
             }
 

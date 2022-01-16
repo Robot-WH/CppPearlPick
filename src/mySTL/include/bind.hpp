@@ -12,6 +12,7 @@
 #include "common.hpp"
 #include "tuple.hpp"
 #include "index_sequence.hpp"
+#include "select_fixer.hpp"
 
 namespace mySTL {
 
@@ -21,15 +22,32 @@ namespace mySTL {
                 binder(Fx f, __Args_type... args) : m_f_(f),  args_(args...) {
                     std::cout<<"Fx construct"<<std::endl;
                 }
+                // // 仿函数
+                // template<typename ... __args_type>
+                // auto operator()(__args_type... args_in) {
+                //     //std::cout<<"operator()(__args_type ... args)"<<std::endl;
+                //     return Call(index_seq_, args_in...);
+                // }
 
-                template<typename ... __args_type>
-                auto operator()(__args_type ... args) {
-                    //std::cout<<"operator()(__args_type ... args)"<<std::endl;
+                // auto operator()() {
+                //     //std::cout<<"operator()()"<<std::endl;
+                //     return Call(index_seq_);  
+                // }
+
+                // template<size_t... __index, typename... __args_type>
+                // auto Call(index_sequence<__index...>, __args_type... args_in) {
+                //     return (*m_f_)(Select_fixer<decltype(get<__index>(args_))>::_Fix(get<__index>(args_),  args_in...)...);  
+                //     //return (*m_f_)(param_wrapper<decltype(get<__index>(args_))>::get_value(get<__index>(args_), args_in...)...);  
+                // }
+
+                // 仿函数    需要调用类对象
+                template<typename ... args_type>
+                auto operator()(args_type ... args) {
                     return (*m_f_)(args ...);
                 }
 
+                // 重载    使用默认参数
                 auto operator()() {
-                    //std::cout<<"operator()()"<<std::endl;
                     return Call(index_seq_);  
                 }
 
@@ -55,6 +73,22 @@ namespace mySTL {
     class mbinder {
         public:
             mbinder(Fx f, T *t, __Args_type... args) : m_f_(f), m_t_(t), args_(args...) {}
+
+            // // 仿函数    需要调用类对象
+            // template<typename ... args_type>
+            // auto operator()(args_type ... args) {
+            //     return Call(index_seq_, args ...);
+            // }
+
+            // // 重载    使用默认参数
+            // auto operator()() {
+            //     return Call(index_seq_);  
+            // }
+
+            // template<size_t... __index, typename... params>
+            // auto Call(index_sequence<__index...>, params... args_in) {
+            //     return (m_t_->*m_f_)(param_wrapper<decltype(get<__index>(args_))>::get_value(get<__index>(args_), args_in...)...);  
+            // }
 
             // 仿函数    需要调用类对象
             template<typename ... args_type>

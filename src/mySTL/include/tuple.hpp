@@ -81,7 +81,7 @@ namespace mySTL {
      * @param tu tuple的引用  
      * @return 值
      */    
-    template<int N, typename ... __args_type>
+    template<size_t N, typename ... __args_type>
     auto get(tuple<__args_type ...> &tu) {
         // 先获取第N个元素对应tuple的型别
         using tuple_type =  typename element<N, tuple<__args_type ...>>::class_type;

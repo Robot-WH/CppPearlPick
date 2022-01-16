@@ -45,12 +45,6 @@ class printTuple {
 		void print(mySTL::index_sequence<__index...>, __Args... args) {
 			//int array[] = {(std::cout<<mySTL::param_wrapper<decltype(mySTL::get<__index>(my_args_))>::get_value(mySTL::get<__index>(my_args_), args...)<<std::endl, 0)...};
 			int array2[] = {(std::cout<<mySTL::Select_fixer<decltype(mySTL::get<__index>(my_args_))>::_Fix(mySTL::get<__index>(my_args_),  args...)<<std::endl, 0)...};
-			//std::cout<<"Select_fixer: "<<mySTL::Select_fixer<decltype(mySTL::get<1>(my_args_))>::_Fix(mySTL::get<1>(my_args_),  args...)<<std::endl;;  
-			//mySTL::Select_fixer<decltype(mySTL::placeholders::_1)> s_f;  
-			//mySTL::Select_fixer<decltype(mySTL::get<1>(my_args_))>::_Fix(mySTL::get<1>(my_args_), args...);  
-			
-			//std::cout<<mySTL::is_placeholder_v<12><<std::endl;
-			//std::cout<<mySTL::Select_fixer<decltype(mySTL::get<1>(my_args_))>::_Fix(mySTL::get<1>(my_args_), args...)<<std::endl;  
 		}
 
 	private:
@@ -72,15 +66,16 @@ int main() {
 	mySTL::function<std::string(int, int, int)> f2 = mySTL::bind(&print); 
 	std::cout<<"f2 func return: " << f2(1,2,3) << std::endl;
 	
-	Print print;   
-	mySTL::function<int(int, int, int)> f3 = mySTL::bind(&Print::draw, &print); 
+	Print print_o;   
+	mySTL::function<int(int, int, int)> f3 = mySTL::bind(&Print::draw, &print_o); 
 	std::cout<<"f3 func return: " << f3(1,2,3) << std::endl;
 
-	// TODO: 实现直接用函数赋值  
-	// mySTL::function<std::string(int, int, int)> f4 = print;  
+	//  实现直接用函数赋值  
+	mySTL::function<std::string(int, int, int)> f4 = print;  
+	std::cout<<"f4 func return: " << f4(1,27,3) << std::endl;
 
-	// auto print_tuple = make_printTuple('c', 1, "hello", 3.3, "yeah", 100, -89, 7.67884);
-	// print_tuple();  
+	auto print_tuple = make_printTuple('c', 1, "hello", 3.3, "yeah", 100, -89, 7.67884);
+	print_tuple();  
 
 	auto test_placeholder = make_printTuple("hello", mySTL::placeholders::_2, 45, mySTL::placeholders::_1, mySTL::placeholders::_4, mySTL::placeholders::_3);    
 	test_placeholder(111, 999, "world", "WH");  
