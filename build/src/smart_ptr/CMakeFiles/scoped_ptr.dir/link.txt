@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.o  -o ../../bin/scoped_ptr 
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/scoped_ptr.dir/scoped_ptr.cpp.o  -o ../../bin/scoped_ptr 

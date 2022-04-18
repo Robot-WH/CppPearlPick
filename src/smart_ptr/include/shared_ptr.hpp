@@ -127,7 +127,6 @@ namespace my {
             ~shared_ptr() {
                 cout<<"free shared_ptr"<<endl;
             }
-            // 拷贝构造函数   核心！！！
             shared_ptr(const shared_ptr<_T>& ptr):p_(ptr.p_), pn_(ptr.pn_) {}
             // @TODO  移动构造 ...
             shared_ptr(shared_ptr<_T>&& ptr) : pn_(std::move(ptr.pn_)) {
