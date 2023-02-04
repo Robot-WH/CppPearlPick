@@ -21,6 +21,7 @@ namespace mySTL {
             virtual ~Base() {}
             virtual std::unique_ptr<Base> Clone() const = 0; 
     };
+    
     // Any 实际数据存储的地方 
     template<typename _T>
     class Data : public Base 
@@ -95,9 +96,7 @@ namespace mySTL {
             //         return base_ptr->Clone();
             //     return nullptr;  
             // }
-
             std::unique_ptr<Base> base_ptr;
             std::type_index type;  
     };
-
 }

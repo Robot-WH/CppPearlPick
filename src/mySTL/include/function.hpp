@@ -22,7 +22,7 @@ namespace mySTL {
      * @param __return_type 函数返回型别
      * @param __args_type 函数参数型别 
      */    
-    template<typename __return_type, typename ... __args_type>
+    template<typename __return_type, typename ...__args_type>
     class BinderWrapperBase {
         public:
             virtual ~BinderWrapperBase() {}

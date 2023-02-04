@@ -16,6 +16,12 @@
 
 namespace mySTL {
 
+    /**
+     * @brief: binder的作用是将函数与参数进行捆绑保存
+     * @details 用于普通成员函数的保存 
+     * @param Fx 函数指针的类型
+     * @param __Args_type 参数类型  
+     */    
     template<typename Fx, typename... __Args_type>
     class binder {
             public: 
@@ -53,7 +59,7 @@ namespace mySTL {
 
                 template<size_t... __index>
                 auto Call(index_sequence<__index...>) {
-                    return (*m_f_)(get<__index>(args_)...);  
+                    return (*m_f_)(get<__index>(args_)...);      // 使用tuple 将函数参数输出
                 }
 
             private:
@@ -63,11 +69,11 @@ namespace mySTL {
     }; // class binder
 
     /**
-     * @brief: 
-     * @details: 
+     * @brief: binder的作用是将函数与参数进行捆绑保存
+     * @details 用于类内成员函数的保存
      * @param Fx 函数指针的类型
      * @param T 类的类型   
-     * @return {*}
+     * @param __Args_type 参数类型  
      */    
     template<typename Fx, typename T, typename... __Args_type>
     class mbinder {

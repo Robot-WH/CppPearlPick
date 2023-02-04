@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/lwh/学习/CppPearlPick/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/mySTL/CMakeFiles/test_copy_elision.dir/rule:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_copy_elision.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_copy_elision.dir/rule
+
+# Convenience name for target.
+test_copy_elision: src/mySTL/CMakeFiles/test_copy_elision.dir/rule
+
+.PHONY : test_copy_elision
+
+# fast build rule for target.
+test_copy_elision/fast:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_copy_elision.dir/build.make src/mySTL/CMakeFiles/test_copy_elision.dir/build
+.PHONY : test_copy_elision/fast
+
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/rule:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/rule
+
+# Convenience name for target.
+test_push_back_emplace_back: src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/rule
+
+.PHONY : test_push_back_emplace_back
+
+# fast build rule for target.
+test_push_back_emplace_back/fast:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/build.make src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/build
+.PHONY : test_push_back_emplace_back/fast
+
+# Convenience name for target.
 src/mySTL/CMakeFiles/test_any.dir/rule:
 	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_any.dir/rule
 .PHONY : src/mySTL/CMakeFiles/test_any.dir/rule
@@ -124,81 +154,6 @@ test_any: src/mySTL/CMakeFiles/test_any.dir/rule
 test_any/fast:
 	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_any.dir/build.make src/mySTL/CMakeFiles/test_any.dir/build
 .PHONY : test_any/fast
-
-# Convenience name for target.
-src/mySTL/CMakeFiles/test_vector.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_vector.dir/rule
-.PHONY : src/mySTL/CMakeFiles/test_vector.dir/rule
-
-# Convenience name for target.
-test_vector: src/mySTL/CMakeFiles/test_vector.dir/rule
-
-.PHONY : test_vector
-
-# fast build rule for target.
-test_vector/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_vector.dir/build.make src/mySTL/CMakeFiles/test_vector.dir/build
-.PHONY : test_vector/fast
-
-# Convenience name for target.
-src/mySTL/CMakeFiles/test_move_forward.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/rule
-.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
-
-# Convenience name for target.
-test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
-
-.PHONY : test_move_forward
-
-# fast build rule for target.
-test_move_forward/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-.PHONY : test_move_forward/fast
-
-# Convenience name for target.
-src/mySTL/CMakeFiles/test_remove_reference.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_remove_reference.dir/rule
-.PHONY : src/mySTL/CMakeFiles/test_remove_reference.dir/rule
-
-# Convenience name for target.
-test_remove_reference: src/mySTL/CMakeFiles/test_remove_reference.dir/rule
-
-.PHONY : test_remove_reference
-
-# fast build rule for target.
-test_remove_reference/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
-.PHONY : test_remove_reference/fast
-
-# Convenience name for target.
-src/mySTL/CMakeFiles/test_tuple.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_tuple.dir/rule
-.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/rule
-
-# Convenience name for target.
-test_tuple: src/mySTL/CMakeFiles/test_tuple.dir/rule
-
-.PHONY : test_tuple
-
-# fast build rule for target.
-test_tuple/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
-.PHONY : test_tuple/fast
-
-# Convenience name for target.
-src/mySTL/CMakeFiles/test_bind.dir/rule:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_bind.dir/rule
-.PHONY : src/mySTL/CMakeFiles/test_bind.dir/rule
-
-# Convenience name for target.
-test_bind: src/mySTL/CMakeFiles/test_bind.dir/rule
-
-.PHONY : test_bind
-
-# fast build rule for target.
-test_bind/fast:
-	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
-.PHONY : test_bind/fast
 
 # Convenience name for target.
 src/mySTL/CMakeFiles/test_function.dir/rule:
@@ -230,6 +185,81 @@ test_list/fast:
 	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_list.dir/build.make src/mySTL/CMakeFiles/test_list.dir/build
 .PHONY : test_list/fast
 
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_bind.dir/rule:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_bind.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_bind.dir/rule
+
+# Convenience name for target.
+test_bind: src/mySTL/CMakeFiles/test_bind.dir/rule
+
+.PHONY : test_bind
+
+# fast build rule for target.
+test_bind/fast:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
+.PHONY : test_bind/fast
+
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_tuple.dir/rule:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_tuple.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_tuple.dir/rule
+
+# Convenience name for target.
+test_tuple: src/mySTL/CMakeFiles/test_tuple.dir/rule
+
+.PHONY : test_tuple
+
+# fast build rule for target.
+test_tuple/fast:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
+.PHONY : test_tuple/fast
+
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_move_forward.dir/rule:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_move_forward.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+# Convenience name for target.
+test_move_forward: src/mySTL/CMakeFiles/test_move_forward.dir/rule
+
+.PHONY : test_move_forward
+
+# fast build rule for target.
+test_move_forward/fast:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
+.PHONY : test_move_forward/fast
+
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_vector.dir/rule:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_vector.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_vector.dir/rule
+
+# Convenience name for target.
+test_vector: src/mySTL/CMakeFiles/test_vector.dir/rule
+
+.PHONY : test_vector
+
+# fast build rule for target.
+test_vector/fast:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_vector.dir/build.make src/mySTL/CMakeFiles/test_vector.dir/build
+.PHONY : test_vector/fast
+
+# Convenience name for target.
+src/mySTL/CMakeFiles/test_remove_reference.dir/rule:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f CMakeFiles/Makefile2 src/mySTL/CMakeFiles/test_remove_reference.dir/rule
+.PHONY : src/mySTL/CMakeFiles/test_remove_reference.dir/rule
+
+# Convenience name for target.
+test_remove_reference: src/mySTL/CMakeFiles/test_remove_reference.dir/rule
+
+.PHONY : test_remove_reference
+
+# fast build rule for target.
+test_remove_reference/fast:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
+.PHONY : test_remove_reference/fast
+
 src/test/container/list_test.o: src/test/container/list_test.cpp.o
 
 .PHONY : src/test/container/list_test.o
@@ -256,6 +286,33 @@ src/test/container/list_test.s: src/test/container/list_test.cpp.s
 src/test/container/list_test.cpp.s:
 	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_list.dir/build.make src/mySTL/CMakeFiles/test_list.dir/src/test/container/list_test.cpp.s
 .PHONY : src/test/container/list_test.cpp.s
+
+src/test/container/test_push_back_emplace_back.o: src/test/container/test_push_back_emplace_back.cpp.o
+
+.PHONY : src/test/container/test_push_back_emplace_back.o
+
+# target to build an object file
+src/test/container/test_push_back_emplace_back.cpp.o:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/build.make src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/src/test/container/test_push_back_emplace_back.cpp.o
+.PHONY : src/test/container/test_push_back_emplace_back.cpp.o
+
+src/test/container/test_push_back_emplace_back.i: src/test/container/test_push_back_emplace_back.cpp.i
+
+.PHONY : src/test/container/test_push_back_emplace_back.i
+
+# target to preprocess a source file
+src/test/container/test_push_back_emplace_back.cpp.i:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/build.make src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/src/test/container/test_push_back_emplace_back.cpp.i
+.PHONY : src/test/container/test_push_back_emplace_back.cpp.i
+
+src/test/container/test_push_back_emplace_back.s: src/test/container/test_push_back_emplace_back.cpp.s
+
+.PHONY : src/test/container/test_push_back_emplace_back.s
+
+# target to generate assembly for a file
+src/test/container/test_push_back_emplace_back.cpp.s:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/build.make src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/src/test/container/test_push_back_emplace_back.cpp.s
+.PHONY : src/test/container/test_push_back_emplace_back.cpp.s
 
 src/test/container/vector_test.o: src/test/container/vector_test.cpp.o
 
@@ -337,6 +394,33 @@ src/test/test_bind.s: src/test/test_bind.cpp.s
 src/test/test_bind.cpp.s:
 	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/src/test/test_bind.cpp.s
 .PHONY : src/test/test_bind.cpp.s
+
+src/test/test_copy_elision.o: src/test/test_copy_elision.cpp.o
+
+.PHONY : src/test/test_copy_elision.o
+
+# target to build an object file
+src/test/test_copy_elision.cpp.o:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_copy_elision.dir/build.make src/mySTL/CMakeFiles/test_copy_elision.dir/src/test/test_copy_elision.cpp.o
+.PHONY : src/test/test_copy_elision.cpp.o
+
+src/test/test_copy_elision.i: src/test/test_copy_elision.cpp.i
+
+.PHONY : src/test/test_copy_elision.i
+
+# target to preprocess a source file
+src/test/test_copy_elision.cpp.i:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_copy_elision.dir/build.make src/mySTL/CMakeFiles/test_copy_elision.dir/src/test/test_copy_elision.cpp.i
+.PHONY : src/test/test_copy_elision.cpp.i
+
+src/test/test_copy_elision.s: src/test/test_copy_elision.cpp.s
+
+.PHONY : src/test/test_copy_elision.s
+
+# target to generate assembly for a file
+src/test/test_copy_elision.cpp.s:
+	cd /home/lwh/学习/CppPearlPick/build && $(MAKE) -f src/mySTL/CMakeFiles/test_copy_elision.dir/build.make src/mySTL/CMakeFiles/test_copy_elision.dir/src/test/test_copy_elision.cpp.s
+.PHONY : src/test/test_copy_elision.cpp.s
 
 src/test/test_function.o: src/test/test_function.cpp.o
 
@@ -452,19 +536,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test_any"
-	@echo "... test_vector"
-	@echo "... test_move_forward"
-	@echo "... edit_cache"
-	@echo "... test_remove_reference"
-	@echo "... test_tuple"
-	@echo "... test_bind"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test_copy_elision"
+	@echo "... test_push_back_emplace_back"
+	@echo "... test_any"
 	@echo "... test_function"
 	@echo "... test_list"
+	@echo "... test_bind"
+	@echo "... test_tuple"
+	@echo "... test_move_forward"
+	@echo "... test_vector"
+	@echo "... test_remove_reference"
 	@echo "... src/test/container/list_test.o"
 	@echo "... src/test/container/list_test.i"
 	@echo "... src/test/container/list_test.s"
+	@echo "... src/test/container/test_push_back_emplace_back.o"
+	@echo "... src/test/container/test_push_back_emplace_back.i"
+	@echo "... src/test/container/test_push_back_emplace_back.s"
 	@echo "... src/test/container/vector_test.o"
 	@echo "... src/test/container/vector_test.i"
 	@echo "... src/test/container/vector_test.s"
@@ -474,6 +563,9 @@ help:
 	@echo "... src/test/test_bind.o"
 	@echo "... src/test/test_bind.i"
 	@echo "... src/test/test_bind.s"
+	@echo "... src/test/test_copy_elision.o"
+	@echo "... src/test/test_copy_elision.i"
+	@echo "... src/test/test_copy_elision.s"
 	@echo "... src/test/test_function.o"
 	@echo "... src/test/test_function.i"
 	@echo "... src/test/test_function.s"

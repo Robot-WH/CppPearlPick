@@ -31,11 +31,18 @@ namespace mySTL {
         public:
             DataVector() : type(typeid(_T))
             {
+                std::cout<<"DataVector type name: "<<type.name()<<std::endl;
             }
 
             std::type_index GetType() const override
             {
                 return type;
+            }
+
+            template<typename _DataT>
+            void SetData(_DataT&& data)
+            {
+
             }
 
             std::vector<_T> values;
@@ -45,8 +52,6 @@ namespace mySTL {
     /**
      * @brief: 非模板类  但是可以存储任意类型的数据 
      * @details: 
-     * @param {*}
-     * @return {*}
      */    
     class AnyVector
     {
@@ -57,6 +62,7 @@ namespace mySTL {
             // 判断类型是否相同    
             template<class _T> bool Is() const
             {
+                std::cout<<"typename :"<<std::type_index(typeid(_T)).name()<<std::endl;
                 return base_ptr->GetType() == std::type_index(typeid(_T));    // typeid操作符的返回结果是名为type_info的标准库类型的对象的引用
             }
 
@@ -75,8 +81,8 @@ namespace mySTL {
                 {
                     throw std::bad_cast();  
                 }
-                dynamic_cast<DataVector<_T>*>(base_ptr.get())->values.push_back(std::forward<_T>(data)); 
-                std::cout<<"data size: "<<dynamic_cast<DataVector<_T>*>(base_ptr.get())->values.size()<<std::endl;
+                dynamic_cast<DataVector<remove_reference_t<_T>>*>(base_ptr.get())->values.push_back(data); 
+                //std::cout<<"data size: "<<dynamic_cast<DataVector<_T>*>(base_ptr.get())->values.size()<<std::endl;
             }
 
             template<class _T>

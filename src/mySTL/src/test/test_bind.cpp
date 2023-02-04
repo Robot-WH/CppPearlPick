@@ -28,6 +28,7 @@ public:
 	std::cout << "a = " << a << "," << "b = " << b << "," << "c = " << c << "\n";
 	return 0;
 }
+
  
 int main() {
     mySTL::binder<int(*)(int, int, int)> f{print};     // 不允许隐式类型转换 

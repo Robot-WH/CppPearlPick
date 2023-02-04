@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_copy_elision
+
+# Build rule for target.
+test_copy_elision: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_copy_elision
+.PHONY : test_copy_elision
+
+# fast build rule for target.
+test_copy_elision/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_copy_elision.dir/build.make src/mySTL/CMakeFiles/test_copy_elision.dir/build
+.PHONY : test_copy_elision/fast
+
+#=============================================================================
+# Target rules for targets named test_push_back_emplace_back
+
+# Build rule for target.
+test_push_back_emplace_back: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_push_back_emplace_back
+.PHONY : test_push_back_emplace_back
+
+# fast build rule for target.
+test_push_back_emplace_back/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/build.make src/mySTL/CMakeFiles/test_push_back_emplace_back.dir/build
+.PHONY : test_push_back_emplace_back/fast
+
+#=============================================================================
 # Target rules for targets named test_any
 
 # Build rule for target.
@@ -122,71 +148,6 @@ test_any: cmake_check_build_system
 test_any/fast:
 	$(MAKE) -f src/mySTL/CMakeFiles/test_any.dir/build.make src/mySTL/CMakeFiles/test_any.dir/build
 .PHONY : test_any/fast
-
-#=============================================================================
-# Target rules for targets named test_vector
-
-# Build rule for target.
-test_vector: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_vector
-.PHONY : test_vector
-
-# fast build rule for target.
-test_vector/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_vector.dir/build.make src/mySTL/CMakeFiles/test_vector.dir/build
-.PHONY : test_vector/fast
-
-#=============================================================================
-# Target rules for targets named test_move_forward
-
-# Build rule for target.
-test_move_forward: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_move_forward
-.PHONY : test_move_forward
-
-# fast build rule for target.
-test_move_forward/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
-.PHONY : test_move_forward/fast
-
-#=============================================================================
-# Target rules for targets named test_remove_reference
-
-# Build rule for target.
-test_remove_reference: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_remove_reference
-.PHONY : test_remove_reference
-
-# fast build rule for target.
-test_remove_reference/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
-.PHONY : test_remove_reference/fast
-
-#=============================================================================
-# Target rules for targets named test_tuple
-
-# Build rule for target.
-test_tuple: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_tuple
-.PHONY : test_tuple
-
-# fast build rule for target.
-test_tuple/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
-.PHONY : test_tuple/fast
-
-#=============================================================================
-# Target rules for targets named test_bind
-
-# Build rule for target.
-test_bind: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_bind
-.PHONY : test_bind
-
-# fast build rule for target.
-test_bind/fast:
-	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
-.PHONY : test_bind/fast
 
 #=============================================================================
 # Target rules for targets named test_function
@@ -215,6 +176,71 @@ test_list/fast:
 .PHONY : test_list/fast
 
 #=============================================================================
+# Target rules for targets named test_bind
+
+# Build rule for target.
+test_bind: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_bind
+.PHONY : test_bind
+
+# fast build rule for target.
+test_bind/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_bind.dir/build.make src/mySTL/CMakeFiles/test_bind.dir/build
+.PHONY : test_bind/fast
+
+#=============================================================================
+# Target rules for targets named test_tuple
+
+# Build rule for target.
+test_tuple: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_tuple
+.PHONY : test_tuple
+
+# fast build rule for target.
+test_tuple/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_tuple.dir/build.make src/mySTL/CMakeFiles/test_tuple.dir/build
+.PHONY : test_tuple/fast
+
+#=============================================================================
+# Target rules for targets named test_move_forward
+
+# Build rule for target.
+test_move_forward: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_move_forward
+.PHONY : test_move_forward
+
+# fast build rule for target.
+test_move_forward/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_move_forward.dir/build.make src/mySTL/CMakeFiles/test_move_forward.dir/build
+.PHONY : test_move_forward/fast
+
+#=============================================================================
+# Target rules for targets named test_vector
+
+# Build rule for target.
+test_vector: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_vector
+.PHONY : test_vector
+
+# fast build rule for target.
+test_vector/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_vector.dir/build.make src/mySTL/CMakeFiles/test_vector.dir/build
+.PHONY : test_vector/fast
+
+#=============================================================================
+# Target rules for targets named test_remove_reference
+
+# Build rule for target.
+test_remove_reference: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_remove_reference
+.PHONY : test_remove_reference
+
+# fast build rule for target.
+test_remove_reference/fast:
+	$(MAKE) -f src/mySTL/CMakeFiles/test_remove_reference.dir/build.make src/mySTL/CMakeFiles/test_remove_reference.dir/build
+.PHONY : test_remove_reference/fast
+
+#=============================================================================
 # Target rules for targets named shared_ptr
 
 # Build rule for target.
@@ -228,19 +254,6 @@ shared_ptr/fast:
 .PHONY : shared_ptr/fast
 
 #=============================================================================
-# Target rules for targets named scoped_ptr
-
-# Build rule for target.
-scoped_ptr: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 scoped_ptr
-.PHONY : scoped_ptr
-
-# fast build rule for target.
-scoped_ptr/fast:
-	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
-.PHONY : scoped_ptr/fast
-
-#=============================================================================
 # Target rules for targets named scoped_array
 
 # Build rule for target.
@@ -252,6 +265,19 @@ scoped_array: cmake_check_build_system
 scoped_array/fast:
 	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_array.dir/build.make src/smart_ptr/CMakeFiles/scoped_array.dir/build
 .PHONY : scoped_array/fast
+
+#=============================================================================
+# Target rules for targets named scoped_ptr
+
+# Build rule for target.
+scoped_ptr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 scoped_ptr
+.PHONY : scoped_ptr
+
+# fast build rule for target.
+scoped_ptr/fast:
+	$(MAKE) -f src/smart_ptr/CMakeFiles/scoped_ptr.dir/build.make src/smart_ptr/CMakeFiles/scoped_ptr.dir/build
+.PHONY : scoped_ptr/fast
 
 #=============================================================================
 # Target rules for targets named decorator
@@ -280,6 +306,19 @@ observer/fast:
 .PHONY : observer/fast
 
 #=============================================================================
+# Target rules for targets named factory
+
+# Build rule for target.
+factory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 factory
+.PHONY : factory
+
+# fast build rule for target.
+factory/fast:
+	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/build
+.PHONY : factory/fast
+
+#=============================================================================
 # Target rules for targets named strategy
 
 # Build rule for target.
@@ -293,17 +332,69 @@ strategy/fast:
 .PHONY : strategy/fast
 
 #=============================================================================
-# Target rules for targets named factory
+# Target rules for targets named maopao_sort
 
 # Build rule for target.
-factory: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 factory
-.PHONY : factory
+maopao_sort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 maopao_sort
+.PHONY : maopao_sort
 
 # fast build rule for target.
-factory/fast:
-	$(MAKE) -f src/designPattern/CMakeFiles/factory.dir/build.make src/designPattern/CMakeFiles/factory.dir/build
-.PHONY : factory/fast
+maopao_sort/fast:
+	$(MAKE) -f src/Algorithm/CMakeFiles/maopao_sort.dir/build.make src/Algorithm/CMakeFiles/maopao_sort.dir/build
+.PHONY : maopao_sort/fast
+
+#=============================================================================
+# Target rules for targets named fast_sort
+
+# Build rule for target.
+fast_sort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fast_sort
+.PHONY : fast_sort
+
+# fast build rule for target.
+fast_sort/fast:
+	$(MAKE) -f src/Algorithm/CMakeFiles/fast_sort.dir/build.make src/Algorithm/CMakeFiles/fast_sort.dir/build
+.PHONY : fast_sort/fast
+
+#=============================================================================
+# Target rules for targets named test_thread_pool
+
+# Build rule for target.
+test_thread_pool: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread_pool
+.PHONY : test_thread_pool
+
+# fast build rule for target.
+test_thread_pool/fast:
+	$(MAKE) -f src/ThreadPool/CMakeFiles/test_thread_pool.dir/build.make src/ThreadPool/CMakeFiles/test_thread_pool.dir/build
+.PHONY : test_thread_pool/fast
+
+#=============================================================================
+# Target rules for targets named learn_async
+
+# Build rule for target.
+learn_async: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 learn_async
+.PHONY : learn_async
+
+# fast build rule for target.
+learn_async/fast:
+	$(MAKE) -f src/ThreadPool/CMakeFiles/learn_async.dir/build.make src/ThreadPool/CMakeFiles/learn_async.dir/build
+.PHONY : learn_async/fast
+
+#=============================================================================
+# Target rules for targets named learn_promise_future
+
+# Build rule for target.
+learn_promise_future: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 learn_promise_future
+.PHONY : learn_promise_future
+
+# fast build rule for target.
+learn_promise_future/fast:
+	$(MAKE) -f src/ThreadPool/CMakeFiles/learn_promise_future.dir/build.make src/ThreadPool/CMakeFiles/learn_promise_future.dir/build
+.PHONY : learn_promise_future/fast
 
 # Help Target
 help:
@@ -313,21 +404,28 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_copy_elision"
+	@echo "... test_push_back_emplace_back"
 	@echo "... test_any"
-	@echo "... test_vector"
-	@echo "... test_move_forward"
-	@echo "... test_remove_reference"
-	@echo "... test_tuple"
-	@echo "... test_bind"
 	@echo "... test_function"
 	@echo "... test_list"
+	@echo "... test_bind"
+	@echo "... test_tuple"
+	@echo "... test_move_forward"
+	@echo "... test_vector"
+	@echo "... test_remove_reference"
 	@echo "... shared_ptr"
-	@echo "... scoped_ptr"
 	@echo "... scoped_array"
+	@echo "... scoped_ptr"
 	@echo "... decorator"
 	@echo "... observer"
-	@echo "... strategy"
 	@echo "... factory"
+	@echo "... strategy"
+	@echo "... maopao_sort"
+	@echo "... fast_sort"
+	@echo "... test_thread_pool"
+	@echo "... learn_async"
+	@echo "... learn_promise_future"
 .PHONY : help
 
 

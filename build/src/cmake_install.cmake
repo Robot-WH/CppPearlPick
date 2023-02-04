@@ -42,6 +42,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/lwh/学习/CppPearlPick/build/src/mySTL/cmake_install.cmake")
   include("/home/lwh/学习/CppPearlPick/build/src/smart_ptr/cmake_install.cmake")
   include("/home/lwh/学习/CppPearlPick/build/src/designPattern/cmake_install.cmake")
+  include("/home/lwh/学习/CppPearlPick/build/src/Algorithm/cmake_install.cmake")
+  include("/home/lwh/学习/CppPearlPick/build/src/ThreadPool/cmake_install.cmake")
 
 endif()
 

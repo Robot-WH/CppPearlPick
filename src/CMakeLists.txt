@@ -1,3 +1,5 @@
 add_subdirectory(mySTL)
 add_subdirectory(smart_ptr)
 add_subdirectory(designPattern)
+add_subdirectory(Algorithm)
+add_subdirectory(ThreadPool)

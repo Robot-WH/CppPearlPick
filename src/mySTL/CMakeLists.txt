@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.0.2)
 
+# add_compile_options(-std=c++11)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_CXX_FLAGS "-O3")
+# set(CMAKE_CXX_FLAGS "-fno-elide-constructors")    # 关闭返回值优化 
 
-add_compile_options(-std=c++11)
-set(CMAKE_BUILD_TYPE Debug)
+
 include_directories( include/ )
 
 #message( WARNING "CMAKE_CURRENT_SOURCE_DIR: " ${CMAKE_CURRENT_SOURCE_DIR} )
@@ -39,5 +43,15 @@ add_executable(test_vector src/test/container/vector_test.cpp  )
 target_link_libraries(test_vector
 -lpthread -luuid
 )
+
+add_executable(test_push_back_emplace_back src/test/container/test_push_back_emplace_back.cpp  )
+target_link_libraries(test_push_back_emplace_back
+)
+
+
+add_executable(test_copy_elision src/test/test_copy_elision.cpp)
+target_link_libraries(test_copy_elision
+)
+
 
 

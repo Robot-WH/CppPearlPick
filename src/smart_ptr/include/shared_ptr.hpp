@@ -41,6 +41,7 @@ namespace my {
             // 不可移动，整个类失去了可移性 
             std::atomic<short> count_use_{1};     // atomic 不可用=初始化 ，不可用()
     }; // class sp_counted_base
+
     // 内存控制器子类
     // sp_counted_base 子类  保存了内存指针  ，已经实现了内存释放的接口 
     template<class _T>
@@ -60,6 +61,7 @@ namespace my {
         private:
             _T *px_; 
     }; // class sp_counted_impl_xx
+
     // 内存控制器的封装层
     class shared_count {
         public:
@@ -99,7 +101,7 @@ namespace my {
             ~shared_count() {
                 cout<<"free shared_count"<<endl;
                 if(pi_ != nullptr) {
-                    pi_->release();       // 调用基类的release   这里并不能直接delete  因为并不一定真的析构它，release只是使使用计数减一 
+                    pi_->release();   // 调用基类的release   这里并不能直接delete  因为并不一定真的析构它，release只是使使用计数减一 
                 }
             }
 
@@ -147,6 +149,7 @@ namespace my {
                 }
                 return *this;  
             }
+            
             // 移动赋值
             shared_ptr<_T>& operator=(shared_ptr<_T> &&sp) {
                 std::cout<<"shared_ptr move operator!"<<std::endl;

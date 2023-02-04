@@ -26,8 +26,8 @@ namespace mySTL {
     };
 
     //  带参偏特化
-    template<typename __this_type, typename ... __args_type>
-    class tuple<__this_type, __args_type ...> : public tuple<__args_type ...> {
+    template<typename __this_type, typename ...__args_type>
+    class tuple<__this_type, __args_type...> : public tuple<__args_type ...> {
         public:
             tuple(__this_type val, __args_type ... params) : value_(val), 
                                                                                                             tuple<__args_type ...>(params ...) 
@@ -71,7 +71,7 @@ namespace mySTL {
     struct element<0, tuple<__this_type, __args_type ...>>
     {
         using value_type = __this_type;    // 获取该元素的型别 
-        using class_type = tuple<__this_type, __args_type ...>;      // 获取对应tuple的对象 
+        using class_type = tuple<__this_type, __args_type...>;      // 获取对应tuple的对象 
     };
 
     /**

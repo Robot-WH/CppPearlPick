@@ -25,7 +25,7 @@ class Print {
 		}
 };
 
- std::string print(int a, int b, int c) {
+ std::string print(int &a, const int &b, int c) {
 	std::cout << "a = " << a << "," << "b = " << b << "," << "c = " << c << "\n";
 	return std::string("hahaha");
 }
@@ -79,6 +79,8 @@ int main() {
 
 	auto test_placeholder = make_printTuple("hello", mySTL::placeholders::_2, 45, mySTL::placeholders::_1, mySTL::placeholders::_4, mySTL::placeholders::_3);    
 	test_placeholder(111, 999, "world", "WH");  
+
+
 
     return 0;  
 }

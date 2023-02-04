@@ -21,7 +21,8 @@ namespace mySTL {
     class index_sequence {};
     /**
      * @brief: 通过迭代生成从 N , N -1, ........ 0的序列
-     * @details: 
+     * @details: 例如传入 N = 3， 则继承的模板参数为<2,2>, 下一次继承为<1,1,2>,下一次<0,0,1,2>,
+     *                      然后进入<0, __INDEX...>的特化，最后继承自index_sequence<0,1,2>
      * @param _N 序列的起始量
      * @param __INDEX 序列  
      */    
